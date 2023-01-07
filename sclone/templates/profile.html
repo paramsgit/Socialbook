@@ -1,0 +1,1206 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{user_profile.user.username}}</title>
+    <link rel="icon" type="image/png" href="/static/logo.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="/static/logo.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/static/logo.png" sizes="96x96">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+   <link rel="stylesheet" href="/static/homemobile2.css">
+   <link rel="stylesheet" href="/static/profilemobile.css">
+   <link rel="stylesheet" href="/static/stylenav.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+  </head>
+  <style>
+    .coveer{
+      background-image: url('{{user_profile.cover.url}}');
+    }
+    body,.farmm{
+background-color: #eff2f6;
+    }
+    .icon{
+      opacity: 0.8;
+    }
+    .navbar{
+      background-color: white;
+      /* box-shadow: 2px 2px 5px grey; */
+        min-width: 1rem;
+position: fixed;
+width: 100%;
+z-index: 10;
+
+    }
+    .navbar2{
+      background-color: white;
+      /* box-shadow: 2px 2px 5px grey; */
+        min-width: 30rem;
+/* position: fixed; */
+width: 100%;
+z-index: 10;
+
+    }
+.top0{
+  top: 0;
+}
+    .container{
+        margin-top: 70px;
+        display: flex;
+        justify-content: center;
+    }
+    .navbar-collapse{
+      justify-content: space-between;
+    }
+    .mrr{
+     
+      margin-right: 5px;
+    }
+    .flx{
+        display: flex;
+    }
+    .andi2{
+      margin: auto;
+    margin-bottom: 4px;
+    /* width: 16px; */
+    font-size: 1.2rem;
+    }
+    .andi{
+      margin: auto;
+    margin-bottom: 4px;
+    opacity: 0.8;
+    font-size: 1rem;
+    }
+    .navbar-brand2 {
+      color: white;
+      
+    margin-right: 1rem;
+    border-radius: 5px;
+    width: 39px;
+    height: 36px;
+    font-size: 1rem;
+    display: flex;
+    white-space: nowrap;
+    background-color: #0f6fec;
+}
+    .navbar-brand{
+      margin-right: 1rem;
+      border-radius: 5px;
+      width: 39px;
+      height: 36px;
+      font-size: 1rem;
+      display: flex;
+      white-space: nowrap;
+    background-color: #eff2f6;
+}
+.likediv{
+  display: flex;
+  align-items: center;
+}
+.top{
+  margin-top: 90px;
+}
+.carousel-inner{
+    display: flex;
+    margin-top: 20px;
+}
+.carousel-item{
+    width: 85%;
+    /* background-color: red; */
+    background-image: url('{{user_profile.cover.url}}');
+    background-size: cover;
+    height: 25rem;
+    margin: auto;
+    margin-bottom: 100px;
+    border-radius: 20px;
+}
+.follow{
+    align-items: center;
+}
+.like{
+  background: none;
+  outline: none;
+  border: 0;
+  margin-right: 0px;
+  margin-bottom: 10px;
+}
+.likediv{
+  display: flex;
+  align-items: center;
+}
+.fdetails{
+    margin-right: 20px;
+    color: white;
+    font-weight: bold;
+  text-shadow: 1px 1px 1px black;
+  /* text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; */
+
+}
+.pphoto{
+    width: 170px;
+    border-radius: 90px;
+    border: 4px solid white;
+}
+.pibtn{
+  width: 2.3rem;
+    border-radius: 5px;
+}
+.navbar-brand :hover{
+  color: rgb(0, 106, 255);
+  opacity: 1;
+}
+.followbtn{
+  height: 30px;
+ display: flex;
+ align-items: center;
+ margin-bottom: 10px;
+font-weight: 500;
+text-shadow: 1px 1px 1px rgb(0, 0, 0);
+/* border: 2px solid black;
+ */
+ box-shadow: 1px 1px 4px #00000085;
+}
+.andarli{
+    margin-top: 270px;
+    margin-left: 40px;
+    margin-right: 40px;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 2;
+}
+.carousel{
+  width: 60%;
+}
+.avatar-xxl {
+    width: 8rem;
+    height: 8rem;}
+    .avatar-img{
+      width: 100%;
+    }
+    .proffile{
+width: 50%;
+margin-left: 150px;
+    }
+    .rightside{
+      width: 27%;
+      margin-left: 40px;
+    }
+.mt-n5{
+  margin-top: -3rem;
+}
+.n33{
+  font-weight: bold;
+  color: gray;
+}
+.list-inline-item{
+  color: rgb(112, 112, 112);
+  font-size: 96%;
+}
+.card-footer{
+  background-color: white;
+}
+    .h-200px{
+      height: 200px;
+    }
+    .postprofile{
+  width: 48px;
+    height: 48px;
+    border-radius: 50px;
+    border: 2px solid rgb(255 255 255);
+}
+.divatra{
+  border: 2px solid rgb(0, 149, 255);
+    height: 52px;
+    width: 52px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    border-radius: 50px;
+}
+.iopo{
+  padding: 14px;
+  padding-bottom: 0;
+}
+.plink{
+  color: black;
+  font-weight: 600;
+  margin-left: 10px;
+  /* margin-bottom: 5px; */
+  font-size: 110%;
+  text-decoration: none;
+}
+.design{
+  display: flex;
+  align-items: center;
+}
+.casew{
+  display: flex;
+  align-items: center;
+}
+.desti{
+  margin-top: 0;
+    margin-left: 10px;
+    font-size: 85%;
+    margin-bottom: 1rem;
+    color: gray;
+}
+.colmd{
+  width: 26.33%;
+}
+.desti2{
+  margin-top: 0;
+    margin-left: 5px;
+    font-size: 85%;
+    margin-bottom: 1rem;
+    color: gray;
+}
+.profilenone{
+  width: 100%;
+}
+.postimgh{
+ 
+  
+    border-radius: 20px;
+    
+}
+.btn-primary-soft{
+  transition: all 0.3s ease-in-out;
+  color: #0f6fec;
+    background-color: rgba(15, 111, 236, 0.1);
+}
+.btn-primary-soft:hover {
+    color: #fff;
+    background-color: #0f6fec;
+    transition: all 0.3s ease-in-out;
+}
+.top{
+  display: flex;
+}
+.caption{
+  margin-top: 0;
+  margin-left: 16px;
+    margin-bottom: 1rem;
+    font-size: 98%;
+    color: rgb(83, 83, 83);
+}
+
+/* followeing */
+.avatar-story {
+    position: relative;
+    padding: 4px;
+    z-index: 1;
+}
+.avatar-xl {
+    height: 5.125rem;
+    width: 5.125rem;
+}
+.frndsection{
+  margin-top:30px;
+}
+.avatar {
+    height: 6rem;
+    width: 6rem;
+    position: relative;
+    display: inline-block;
+    -ms-flex-negative: 0 !important;
+    flex-shrink: 0 !important;
+}
+.btn-danger-soft {
+  color: #d6293e;
+  background-color: rgba(214, 41, 62, 0.1);
+}
+#profileAction2:hover,.proffff:hover{
+  background-color: #0f6fec;
+  color: white;
+  border-color: white;
+}
+.btn-danger-soft:hover {
+  color: #fff;
+  background-color: #d6293e;
+}
+.dots{
+  padding: 14px;
+  padding-top: 0;
+  font-size: 150%;
+}
+.ultrasonic{
+  justify-content: space-between;
+}
+  </style>
+  <body> 
+   
+    <nav class="navbar navbar-expand-lg top0 fstnav ">
+      <div class="container-fluid">
+        <a class="navbar-brand2 jsflex" href="/">
+          <img class="light-mode-item navbar-brand-item hww"  src="/static/logo.png" alt="logo">
+          <!-- <i class="andi2 bi bi-facebook"></i> -->
+
+          
+          
+          
+        </a>
+         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          
+          <!-- <form class="d-flex" rol>
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            
+          </form> -->
+          <div class=" nav mt-3 mt-lg-0 flex-nowrap align-items-center px-4 px-lg-0">
+            <div class="nav-item w-100">
+              <form class="rounded position-relative" method="post" action="/search">
+                {% csrf_token %}
+                <input class="farmm form-control ps-5 bg-light" type="search" placeholder="Search..." aria-label="Search" name="searchu">
+                <button class="btn bg-transparent px-2 py-0 position-absolute top-50 start-0 translate-middle-y" type="submit"><i class="icon bi bi-search fs-5"> </i></button>
+              </form>
+            </div>
+          </div>
+
+         <ul class="navbar-nav mb-2 mb-lg-0 mrr" >
+          
+          <li class="nav-item">
+            <a class="navbar-brand" href="#" role="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              <i class="andi bi bi-plus"></i>
+             
+
+           </a>
+          
+          </li>
+          
+          <li class="nav-item">
+            <a class="navbar-brand" href="/chat">
+              <i class="andi bi bi-chat-left-text-fill"></i>
+           </a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="navbar-brand" href="/psettings">
+              <i class="andi bi bi-gear-fill"></i>
+           </a>
+            
+          </li>
+          <li class="nav-item">
+            <a class="" href="/profile/{{user_own.user}}">
+               <!-- <i class="andi bi bi-emoji-smile-fill"></i>  -->
+              <img href="/psettings" class="pibtn" src="{{user_own.file.url}}" alt="n">
+           </a>
+          </li>
+        </ul>
+          
+        </div>
+      </div>
+    </nav>
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Upload Post</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form action="/upload" method="post" enctype="multipart/form-data">
+              {% csrf_token %}
+
+              <div class="mb-3">
+                <label for="image" class="form-label">Photo</label>
+                <input type="file" class="form-control" name="uphoto" id="image" placeholder="name@example.com">
+              </div>
+              <div class="mb-3">
+                <label for="txt" class="form-label">Caption Here</label>
+                <textarea class="form-control" id="txt" name="caption" placeholder="caption here..." rows="3"></textarea>
+              </div>
+
+                    
+                      
+                      
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                      </div>
+                  </form>
+          </div>
+         
+        </div>
+      </div>
+    </div>
+    <nav class="navbar fixed-top mobilenav social" style="position: absolute;">
+      <p class="socialbook">
+        Socialbook
+      </p>
+    </nav>
+    
+    <nav class="navbar navbar-dark bg-transparent fixed-bottom mobilenav" style="min-width:1rem ;justify-content: center;padding-bottom: 0;">
+     
+      <ul class="navigation">
+        <li>
+          <a href="/">
+            <span class="icon" style="opacity: 1;">
+              <ion-icon name="home-outline"></ion-icon>
+            </span>
+            <!-- <span class="text">Home</span> -->
+          </a>
+        </li>
+        <li>
+          <a href="/search">
+            <span class="icon" style="opacity: 1;">
+              <!-- <ion-icon name="person-outline"></ion-icon> -->
+              <ion-icon name="search-outline"></ion-icon>
+            </span>
+            <!-- <span class="text">Search</span> -->
+          </a>
+        </li>
+        <li>
+          <a href="/chat">
+            <span class="icon" style="opacity: 1;">
+              <ion-icon name="chatbubble-outline"></ion-icon>
+            </span>
+            <!-- <span class="text">Messages</span> -->
+          </a>
+        </li>
+        <li class="active">
+          <!-- <a href="/profile/{{user_profile.user}}"> -->
+          <a href="/profile/{{user_own.user}}">
+            <span class="icon" style="opacity: 1;">
+              <ion-icon name="person-outline"></ion-icon>
+            </span>
+            <!-- <span class="text">Profile</span> -->
+          </a>
+        </li>
+        <li>
+          <a href="/psettings">
+            <span class="icon" style="opacity: 1;">
+              <ion-icon name="settings-outline"></ion-icon>
+            </span>
+            <!-- <span class="text">Settings</span> -->
+          </a>
+        </li>
+        <div class="indicator"></div>
+      </ul>
+    </nav>
+
+    <div class="profilenone">
+    <div class="top " >
+
+      
+<div class="proffile">
+
+  <div class="card">
+    <!-- Cover image -->
+    <div class="h-200px rounded-top" style="background-image:url('{{user_profile.cover.url}}'); background-position: center; background-size: cover; background-repeat: no-repeat;"></div>
+      <!-- Card body START -->
+      <div class="card-body py-0">
+        <div class="d-sm-flex align-items-start text-center text-sm-start">
+          <div>
+            <!-- Avatar -->
+            <div class="avatar avatar-xxl mt-n5 mb-3">
+              <img class="avatar-img rounded-circle border border-white border-3" src="{{user_profile.file.url}}" alt="">
+            </div>
+          </div>
+          <div class="ms-sm-4 mt-sm-3">
+            <!-- Info -->
+            <h1 class="mb-0 h5">{{user_profile.fname}} {{user_profile.lname}} <i class="bi bi-patch-check-fill text-success small"></i></h1>
+            <p style="color: gray;">@{{user_profile.user}}</p>
+          </div>
+          <!-- Button -->
+          <div class="d-flex mt-3 justify-content-center ms-sm-auto">
+            <form action="/follow" method="post">
+              {% csrf_token %}
+                                  
+                                  <div class="follow flx" >
+                                      
+                                      <input type="hidden" name="follower" value="{{user.username}}">
+                                      <input type="hidden" value="{{user_object.username}}" name="user">
+                                     
+                                      {% if user_object.username == user.username %}
+                                      <a href="/psettings" class=" btn btn-danger-soft me-2"> Settings</a>
+                                     {% else %}
+                                     <button class="btn btn-danger-soft me-2" type="submit"> {{buttontxt}}</button>
+                                     {% endif %}
+                                  </div>
+                                </form>
+                                {% if user_object.username != user.username %}
+            <div class="dropdown">
+              <!-- Card share action menu -->
+              <button class="icon-md btn btn-light" type="button" id="profileAction2" onclick="window.location.href='/chatroom/{{user_profile.user}}'"  aria-expanded="false">
+                <i class="andi bi bi-chat-left-text-fill"></i>
+              </button>
+              <!-- Card share action dropdown menu -->
+              
+            </div>
+            {% else %}
+            <!-- Button trigger modal -->
+            <div class="dropdown">
+<button type="button" class="icon-md btn btn-light proffff" data-bs-toggle="modal" data-bs-target="#signout_confirm">
+  <i class="bi bi-door-open-fill"></i></button>
+            </div>
+<!-- Modal -->
+<div class="modal fade" id="signout_confirm" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="signout_confirmLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="signout_confirmLabel">Signout</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Are you sure, Signout ?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" onclick="window.location.href='/signout'" class="btn btn-primary">Confirm</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+            {% endif %}
+          </div>
+        </div>
+        <!-- List profile -->
+        <ul class="list-inline mb-0 text-center text-sm-start mt-3 mt-sm-0">
+          <li class="list-inline-item"><i class="bi bi-briefcase me-1"></i> {{user_profile.role}}</li>
+          <li class="list-inline-item"><i class="bi bi-geo-alt me-1"></i> {{user_profile.location}}</li>
+          <li class="list-inline-item"><i class="bi bi-calendar2-plus me-1"></i> Joined on {{user_profile.joining}}</li>
+        </ul>
+        
+      </div>
+
+      {% comment %} 3cheeza jehria kaddia cache 
+      <p class="fdetails">{{noofposts }} posts</p>
+                                <p class="fdetails">{{user_followers}} followers</p>
+                                <p class="fdetails">{{user_following}} following</p>
+      {% endcomment %}
+     
+      <!-- Card body END -->
+      <div class="card-footer mt-3 pt-2 pb-0">
+        <!-- Nav profile pages -->
+        <ul class="nav nav-bottom-line align-items-center justify-content-center justify-content-md-start mb-0 border-0">
+          <li class="nav-item"> <a class="nav-link n33 active" href="my-profile.html"> Posts {{noofposts}}</a> </li>
+
+         
+
+          {% if user_object.username == user.username %}
+           <li class="nav-item"> <a class="nav-link n33" href="/followsme">Followers {{user_followers}}</a> </li>
+          {% else %}
+          <li class="nav-item"> <a class="nav-link n33" href="#">Followers {{user_followers}}</a> </li>
+          {% endif %}
+
+          {% if user_object.username == user.username %} 
+          <li class="nav-item"> <a class="nav-link n33" href="/youfollows"> Follows {{user_following}} </a> </li>
+          {% else %}
+          <li class="nav-item"> <a class="nav-link n33" href="#"> Follows {{user_following}} </a> </li>
+          {% endif %}
+          
+          
+        </ul>
+      </div>
+    </div>
+    <!-- My profile END -->
+
+ 
+
+      <div class="vichli"> 
+
+ 
+        {% for post in posts reversed %}
+
+        
+        
+        <div id=""></div>
+        <div class="card spsl" style="margin: 20px 0 10px 0;">
+
+          <div class="d-flex ultrasonic" >
+      <div class="iopo" style="display: flex;">
+        <div class="divatra">
+      <img src="/static/07.jpg" alt="" class="postprofile" id="cardio{{forloop.counter}}" name="{{post.user}}"></div>
+      
+      <div class="div" style="display: flex;flex-direction:column;">
+        <a class="plink" href="profile/{{post.user}}">{{post.user}}</a>
+        <div class="design"><p class="desti" id="parole{{forloop.counter}}">Student</p><p class="desti2">at</p><p class="desti2" id="palocasion{{forloop.counter}}">Sahara</p></div>
+        
+      </div>
+
+      
+
+      </div>
+
+      <div class="dots">
+        <div class="dropdown">
+          <!-- Card share action menu -->
+          <button class="icon-md btn btn-light" type="button" id="profileAction2" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <!-- Card share action dropdown menu -->
+          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="profileAction2">
+            {% if user_object.username == user.username %}
+            <li><a class="dropdown-item d-flex" href="#">
+             <!-- form for delete -->
+<form action="/deletepost" method="post">
+  {% csrf_token %}
+  <input type="text" name="postid" value="{{post.id}}" hidden>
+  <button type="submit" style="border: none;outline:none;background-color:transparent;"><i class="bi bi-trash fa-fw pe-2"></i> Delete this post</button> 
+</form>
+              <!-- form ends -->
+            </a></li>
+            {% endif %}
+           
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#"> <i class="bi bi-gear fa-fw pe-2"></i>Profile settings</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+
+      <p class="card-text caption">{{post.caption}}</p>
+      {% if post.image %}
+      <div class="" style="padding: 15px;padding-top:0;padding-bottom: 0;">
+      
+        
+          <img src="{{post.image.url}}" class="card-img-top postimgh" alt="..."></div>{% endif %}
+          <div class="card-body" id="divToReload">
+            <div class="up" id="inr" style="display: flex;justify-content:space-between;">
+              <div class="likediv">
+                <form action="/like_post" id="formforlike{{post.id}}" style="display: none;">
+                  {% csrf_token %}
+          {{form.as_p}}
+                </form>
+      
+        <div class="casew" id="m{{post.id}}">
+                <button class="like" id="likebtn{{post.id}}" value="{{post.id}}" onclick="doaba(this.id)" ><i class="andi2 bi bi-hand-thumbs-up-fill"></i></button>
+            <h5 class="card-title" id="l{{post.id}}">{{post.likes}}</h5></div></div>
+      
+          <p>{{post.tam}}</p>
+          </div>
+           
+            
+          </div>
+        </div>
+
+{% if forloop.counter|divisibleby:"2" %}
+<br>{% endif %}
+
+      
+        {% endfor %}
+      
+          <!-- <div class="card " style="width: 30rem">
+           <a class="plink" href="">username</a>
+          <img src="/static/img6.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <div class="up" style="display: flex;justify-content:space-between;">
+            <h5 class="card-title">Card title</h5>
+          <p>time</p>
+          </div>
+            <p class="card-text caption">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            
+          </div>
+        </div> -->
+      
+      
+      
+        </div>
+</div>
+
+
+          <div class="rightside">
+            <div class="col-md-6 col-lg-12">
+              <div class="card">
+                <div class="card-header border-0 pb-0">
+                  <h5 class="card-title">About</h5>
+                  <!-- Button modal -->
+                </div>
+                <!-- Card body START -->
+                <div class="card-body position-relative pt-0">
+                  <p style="margin-top: 10px;">{{user_profile.bio}}</p>
+                  <!-- Date time -->
+                  <ul class="list-unstyled mt-3 mb-0">
+                    <li class="mb-2"> <i class="bi bi-heart fa-fw pe-1"></i> Status: <strong> {{user_profile.status}} </strong> </li>
+                     <li class="mb-2"> <i class="bi bi-envelope fa-fw pe-1"></i> Country: <strong> India </strong> </li>
+                    <li class="mb-2"> <i class="bi bi-calendar-date fa-fw pe-1"></i> Born: <strong> {{user_profile.dob}} </strong> </li>
+
+                  </ul>
+                </div>
+          </div>
+          </div>
+
+          {% if user_object.username == user.username %}
+          <div class="col-md-6 col-lg-12 frndsection">
+            <div class="card">
+              <!-- Card header START -->
+              <div class="card-header d-sm-flex justify-content-between align-items-center border-0" style="background-color: white;">
+                <h5 class="card-title">Following <span class="badge bg-danger bg-opacity-10 text-danger">{{user_following}}</span></h5>
+                <a class="btn btn-primary-soft btn-sm" href="/youfollows"> See all </a>
+              </div>
+          <div class="card-body position-relative pt-0">
+            <div class="row g-3 mario">
+
+              {% if userfollowing.0.user %}
+              <div class="col-6">
+
+                <!-- Friends item START -->
+                <div class="card shadow-none text-center h-100">
+                  <!-- Card body -->
+                  <div class="card-body p-2 pb-0">
+                    <div class="avatar avatar-story avatar-xl">
+                      <a href="/profile/{{userfollowing.0.user}}" ><img class="avatar-img rounded-circle" src=" {{userfollowing.0.file.url}}" alt=""></a>
+                    </div>
+                    <h6 class="card-title mb-1 mt-3"> <a href="/profile/{{userfollowing.0.user}}" style="text-decoration: none;"> {{userfollowing.0.fname}} </a></h6>
+                    <p class="mb-0 small lh-sm" style="color: gray;font-size:80%;">{{userfollowing.0.role}} at {{userfollowing.0.location}}</p>
+                  </div>
+                  <!-- Card footer -->
+                  <div class="card-footer p-2 border-0">
+                    <button class="btn btn-sm btn-primary"  onclick="window.location.href='/chatroom/{{userfollowing.0.user}}'" data-bs-toggle="tooltip" data-bs-placement="top" title="Send message"> <i class="bi bi-chat-left-text"></i> </button>
+                    <button class="btn btn-sm btn-danger" onclick="window.location.href='/profile/{{userfollowing.0.user}}'" data-bs-toggle="tooltip" data-bs-placement="top" title="View Profile"> <i class="bi bi-person-fill"></i> </button>
+                  </div>
+                </div>
+                <!-- Friends item END -->
+              </div>
+              {% endif %}
+              {% if userfollowing.1.user %}
+              <div class="col-6">
+                <!-- Friends item START -->
+                <div class="card shadow-none text-center h-100">
+                  <!-- Card body -->
+                  <div class="card-body p-2 pb-0">
+                    <div class="avatar avatar-xl">
+                      <a href="/profile/{{userfollowing.1.user}}"><img class="avatar-img rounded-circle" src="{{userfollowing.1.file.url}}" alt=""></a>
+                    </div>
+                    <h6 class="card-title mb-1 mt-3"> <a href="/profile/{{userfollowing.1.user}}" style="text-decoration: none;"> {{userfollowing.1.fname}}</a></h6>
+                    <p class="mb-0 small lh-sm" style="color: gray;font-size:80%;">{{userfollowing.1.role}} at {{userfollowing.1.location}}</p>
+                  </div>
+                  <!-- Card footer -->
+                  <div class="card-footer p-2 border-0">
+                    <button class="btn btn-sm btn-primary"   onclick="window.location.href='/chatroom/{{userfollowing.1.user}}'" data-bs-toggle="tooltip" data-bs-placement="top" title="Send message"> <i class="bi bi-chat-left-text"></i> </button>
+                    <button class="btn btn-sm btn-danger" data-bs-toggle="tooltip" onclick="window.location.href='/profile/{{userfollowing.1.user}}'" data-bs-placement="top" title="View Profile"> <i class="bi bi-person-fill"></i> </button>
+                  </div>
+                </div>
+                <!-- Friends item END -->
+              </div>
+              {% endif %}
+              {% if userfollowing.2.user %}
+              <div class="col-6">
+                <!-- Friends item START -->
+                <div class="card shadow-none text-center h-100">
+                  <!-- Card body -->
+                  <div class="card-body p-2 pb-0">
+                    <div class="avatar avatar-xl">
+                      <a href="/profile/{{userfollowing.2.user}}"><img class="avatar-img rounded-circle" src="{{userfollowing.2.file.url}}" alt=""></a>
+                    </div>
+                    <h6 class="card-title mb-1 mt-3"> <a href="/profile/{{userfollowing.2.user}}" style="text-decoration: none;">  {{userfollowing.2.fname}}</a></h6>
+                    <p class="mb-0 small lh-sm" style="color: gray;font-size:80%;">{{userfollowing.2.role}} at {{userfollowing.2.location}}</p>
+                  </div>
+                  <!-- Card footer -->
+                  <div class="card-footer p-2 border-0">
+                    <button class="btn btn-sm btn-primary"  onclick="window.location.href='/chatroom/{{userfollowing.2.user}}'" data-bs-toggle="tooltip" data-bs-placement="top" title="Send message"> <i class="bi bi-chat-left-text"></i> </button>
+                    <button class="btn btn-sm btn-danger" data-bs-toggle="tooltip" onclick="window.location.href='/profile/{{userfollowing.3.user}}'" data-bs-placement="top" title="View Profile"> <i class="bi bi-person-fill"></i> </button>
+                  </div>
+                </div>
+                <!-- Friends item END -->
+              </div>
+              {% endif %}
+              {% if userfollowing.3.user %}
+              <div class="col-6">
+                <!-- Friends item START -->
+                <div class="card shadow-none text-center h-100">
+                  <!-- Card body -->
+                  <div class="card-body p-2 pb-0">
+                    <div class="avatar avatar-xl">
+                      <a href="/profile/{{userfollowing.3.user}}"><img class="avatar-img rounded-circle" src="{{userfollowing.3.file.url}}" alt=""></a>
+                    </div>
+                    <h6 class="card-title mb-1 mt-3"> <a href="/profile/{{userfollowing.3.user}}" style="text-decoration: none;"> {{userfollowing.3.fname}} </a></h6>
+                    <p class="mb-0 small lh-sm" style="color: gray;font-size:80%;">{{userfollowing.3.role}} at {{userfollowing.3.location}}</p>
+                  </div>
+                  <!-- Card footer -->
+                  <div class="card-footer p-2 border-0">
+                    <button class="btn btn-sm btn-primary"  onclick="window.location.href='/chatroom/{{userfollowing.3.user}}'" data-bs-toggle="tooltip" data-bs-placement="top" title="Send message"> <i class="bi bi-chat-left-text"></i> </button>
+                    <button class="btn btn-sm btn-danger" data-bs-toggle="tooltip" onclick="window.location.href='/profile/{{userfollowing.3.user}}'" data-bs-placement="top" title="View Profile"> <i class="bi bi-person-fill"></i> </button>
+                  </div>
+                </div>
+                <!-- Friends item END -->
+              </div>
+              {% endif %}
+            </div>
+          </div>
+          <!-- Card body END -->
+        </div>
+      </div>
+      {% endif %}
+
+          </div>
+          </div>
+    
+   
+
+      <main class=""><div class="container">
+        {% load static %}
+      <div class="left"></div> 
+
+<!-- <div class="right">
+  <a href="/signout">Signout</a>
+  <a href="/">home</a>
+</div> -->
+    </div>
+  </div>
+
+
+<div class="mobileprofile" style="margin-bottom: 70px;margin-top:70px;">
+  <div class="rpp " >
+    <div class="topfloor">
+      <div class="coveer" >
+        <div class="ppp">
+          <img class="chottip" src="{{user_profile.file.url}}" alt="">
+        </div>
+       
+      </div>
+<div class="flx afl" style="margin-top: 14vh;">
+     <h5 class="mb-0 mbna">{{user_profile.fname}} {{user_profile.lname}}</h5></div>
+<div class="flx fl2">
+     <p class="mb-0 pmb">{{user_profile.role}} at {{user_profile.location}}</p></div>
+
+
+    <form action="/follow" method="post">
+      {% csrf_token %}
+                          
+                          <div class="follow flx" >
+                              
+                              <input type="hidden" name="follower" value="{{user.username}}">
+                              <input type="hidden" value="{{user_object.username}}" name="user">
+                             
+                              {% if user_object.username != user.username %}
+                              
+                             <button class="btn btn-danger-soft me-2" type="submit"> {{buttontxt}}</button>
+                             {% endif %}
+                          </div>
+                        </form>
+
+<div class="flx ">
+<div class="hstack gap-2 gap-xl-3 justify-content-center" style="margin:auto;margin-top: 20px;">
+<!-- User stat item -->
+<div class="flx">
+  {% if user_object.username == user.username %}
+  <a class="nav-link  mb-0 vff n3333" href="#seeall" style="font-size: 120%;"><h6 class="mb-0 vff">{{noofposts}}</h6></a>
+  {% else %}
+  <h6 class="mb-0 vff" style="font-size: 120%;">{{noofposts}}</h6>
+  {% endif %}<small>Post</small>
+</div>
+<!-- Divider -->
+<!-- {% if user_object.username == user.username %}
+<a class="nav-link n33" href="/followsme"><h6 class="mb-0 vff">{{user_followers}}</h6></a>
+{% endif %} -->
+<div class="vr"></div>
+<!-- User stat item -->
+<div class="flx">
+  {% if user_object.username == user.username %}
+<a class="nav-link  mb-0 vff n3333" href="/followsme" style="font-size: 120%;"><h6 class="mb-0 vff">{{user_followers}}</h6></a>
+{% else %}
+<h6 class="mb-0 vff">{{user_followers}}</h6>
+{% endif %}
+
+<small>Followers</small>
+</div>
+<!-- Divider -->
+<div class="vr"></div>
+<!-- User stat item -->
+<div class="flx">
+  {% if user_object.username == user.username %}
+  <a class="nav-link  mb-0 vff n3333" href="/youfollows"><h6 class="mb-0 vff">{{user_following}}</h6></a>
+  {% else %}
+  <h6 class="mb-0 vff">{{user_following}}</h6>
+  {% endif %}
+<small>Following</small>
+</div>
+
+</div></div>
+
+<hr style="width: 85%;margin-left:auto;margin-right:auto ;">
+
+<div class="col-md-6 col-lg-12">
+  <div class="card" style="font-size: 110%;border:none;">
+    <div class="card-header border-0 pb-0" style="background-color: white;font-weight:bolder;">
+      <h5 class="card-title" >About</h5>
+      <!-- Button modal -->
+    </div>
+    <!-- Card body START -->
+    <div class="card-body position-relative pt-0">
+      <p style="margin-top: 10px;">{{user_profile.bio}}</p>
+      <!-- Date time -->
+      <ul class="list-unstyled mt-3 mb-0">
+        <li class="mb-2"> <i class="bi bi-calendar-date fa-fw pe-1"></i> Born: <strong> October 20, 1990 </strong> </li>
+        <li class="mb-2"> <i class="bi bi-postcard-heart fa-fw pe-1"></i> Status: <strong> Single </strong> </li>
+        <li> <i class="bi bi-envelope-paper fa-fw pe-1"></i> Email: <strong> webestica@gmail.com </strong> </li>
+      </ul>
+    </div>
+</div>
+</div>
+
+<hr class="lhr">
+<div class="card-footer text-center">
+  <a class="btn btn-link btn-sm vppp" href="#" style="color: green;" id="seeall">See all Posts</a>
+  </div>
+<div class="vichli" id="vichliid"> 
+  <hr class="lhr" style="margin: 0;">
+ 
+  {% for post in posts reversed %}
+
+  
+  
+  <div id=""></div>
+  <div class="card spsl" style="margin: 20px 0 10px 0;">
+
+    <div class="d-flex ultrasonic">
+<div class="iopo" style="display: flex;">
+  <div class="divatra">
+<img src="/static/07.jpg" alt="" class="postprofile" id="cardio2{{forloop.counter}}" name="{{post.user}}"></div>
+
+<div class="div" style="display: flex;flex-direction:column;">
+  <a class="plink" href="profile/{{post.user}}">{{post.user}}</a>
+  <div class="design"><p class="desti" id="parole2{{forloop.counter}}">Student</p><p class="desti2">at</p><p class="desti2" id="palocasion2{{forloop.counter}}">Sahara</p></div>
+  
+</div>
+
+</div>
+
+<div class="dots">
+  <div class="dropdown">
+    <!-- Card share action menu -->
+    <button class="icon-md btn btn-light" type="button" id="profileAction2" data-bs-toggle="dropdown" aria-expanded="false">
+      <i class="bi bi-three-dots"></i>
+    </button>
+    <!-- Card share action dropdown menu -->
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="profileAction2">
+      {% if user_object.username == user.username %}
+      <li><a class="dropdown-item d-flex" href="#">
+       <!-- form for delete -->
+<form action="/deletepost" method="post">
+{% csrf_token %}
+<input type="text" name="postid" value="{{post.id}}" hidden>
+<button type="submit" style="border: none;outline:none;background-color:transparent;"><i class="bi bi-trash fa-fw pe-2"></i> Delete this post</button> 
+</form>
+        <!-- form ends -->
+      </a></li>
+      {% endif %}
+     
+      <li><hr class="dropdown-divider"></li>
+      <li><a class="dropdown-item" href="#"> <i class="bi bi-gear fa-fw pe-2"></i>Profile settings</a></li>
+    </ul>
+  </div>
+</div>
+</div>
+<p class="card-text caption">{{post.caption}}</p>
+{% if post.image %}
+<div class="kabada" style="padding: 15px;padding-top:0;padding-bottom: 0;">
+
+  
+    <img src="{{post.image.url}}" class="card-img-top postimgh" alt="..."></div>{% endif %}
+    <div class="card-body" id="divToReload2">
+      <div class="up" id="inr2" style="display: flex;justify-content:space-between;">
+        <div class="likediv">
+          <form action="/like_post" id="formforlike2{{post.id}}" style="display: none;">
+            {% csrf_token %}
+    {{form.as_p}}
+          </form>
+
+  <div class="casew" id="m2{{post.id}}">
+          <button class="like" id="likebtn2{{post.id}}" value="{{post.id}}" onclick="doaba2(this.id)" ><i class="andi2 bi bi-hand-thumbs-up-fill"></i></button>
+      <h5 class="card-title" id="l2{{post.id}}">{{post.likes}}</h5></div></div>
+
+    <p>{{post.tam}}</p>
+    </div>
+     
+      
+    </div>
+  </div>
+
+
+
+
+  {% endfor %}
+
+
+
+
+  </div>
+  <hr class="lhr">
+<div class="card-footer text-center py-2">
+  {% if user_object.username == user.username %}
+<a class="btn btn-link btn-sm vppp" href="/signout" >Signout</a>
+{% else %}
+<a class="btn btn-link btn-sm vppp" href="/chatroom/{{user_object.username}}" >Message</a>
+
+{% endif %}
+</div>
+
+
+    </div>
+    
+  
+  </div>
+</div>
+</main>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script>
+      // const list = document.querySelectorAll('.navigation li');
+      // function activelink(){
+      //   list.forEach((item) =>
+      //   item.classList.remove('active'));
+      //   this.classList.add('active');
+      // }
+      // list.forEach((item) =>
+      // item.addEventListener('click', activelink));
+    </script>
+    <script>
+
+for(let i=1;i<={{posts|length}};i++){
+ 
+  document.getElementById('cardio2'+i).src='{{user_profile.file.url}}'
+  document.getElementById('parole2'+i).innerHTML='{{user_profile.role}}'
+  document.getElementById('palocasion2'+i).innerHTML='{{user_profile.location}}'
+ 
+}
+for(let i=1;i<={{posts|length}};i++){
+ 
+  document.getElementById('cardio'+i).src='{{user_profile.file.url}}'
+  document.getElementById('parole'+i).innerHTML='{{user_profile.role}}'
+  document.getElementById('palocasion'+i).innerHTML='{{user_profile.location}}'
+ 
+}
+
+      function doaba(e) {
+  
+        console.log(e)
+      // e.preventDefault()
+      // let postid=document.getElementById('e').value;
+      let postid=e.slice(7)
+      
+      
+      console.log(postid)
+      let imageform=document.getElementById(`formforlike`+postid)
+      
+      let csrf = document.getElementsByName('csrfmiddlewaretoken')
+      
+      let user= '{{user_own.user}}'
+      console.log(user)
+      const fd = new FormData();
+                  fd.append('csrfmiddlewaretoken', csrf[0].value)
+                  fd.append('postid',postid)
+                  fd.append('username',user)
+      
+      
+      
+                  $.ajax({
+                      type:'POST',
+                      url: imageform.action,
+                      enctype: 'multipart/form-data',
+                      data: fd,
+                      success: function(response){
+                          console.log('success', response)
+                          // $('#formforlike'+postid)[0].reset();
+                          let zz=JSON.stringify(response)
+                          let nl=document.getElementById(`l${postid}`).innerHTML
+                         document.getElementById(`l${postid}`).innerHTML=zz[11]
+                          // e.preventDefault()
+                          if(zz[11]>nl){
+                    document.getElementById(`likebtn${postid}`).style.color='#0061ff';}
+                    else{
+                      document.getElementById(`likebtn${postid}`).style.color='black';  
+                    }
+                      },
+                      error: function(error){
+                          console.log('error', error)
+                          
+                      },
+                      cache: false,
+                      contentType: false,
+                      processData: false,
+                  })
+                  
+      };
+      
+      function doaba2(e) {
+  
+        console.log(e)
+      // e.preventDefault()
+      // let postid=document.getElementById('e').value;
+      let postid=e.slice(8)
+      
+      
+      console.log(postid)
+      let imageform2=document.getElementById(`formforlike2`+postid)
+      
+      let csrf = document.getElementsByName('csrfmiddlewaretoken')
+      
+      let user= '{{user_own.user}}'
+      const fd = new FormData();
+                  fd.append('csrfmiddlewaretoken', csrf[0].value)
+                  fd.append('postid',postid)
+                  fd.append('username',user)
+      
+      
+      
+                  $.ajax({
+                      type:'POST',
+                      url: imageform2.action,
+                      enctype: 'multipart/form-data',
+                      data: fd,
+                      success: function(response){
+                          console.log('success', response)
+                          // $('#formforlike'+postid)[0].reset();
+                          let zz=JSON.stringify(response)
+                          
+                          let nl=document.getElementById(`l2${postid}`).innerHTML
+                         document.getElementById(`l2${postid}`).innerHTML=zz[11]
+                          // e.preventDefault()
+                          if(zz[11]>nl){
+                    document.getElementById(`likebtn2${postid}`).style.color='#0061ff';}
+                    else{
+                      document.getElementById(`likebtn2${postid}`).style.color='black';  
+                    }
+                          // e.preventDefault()
+                      },
+                      error: function(error){
+                          console.log('error', error)
+                          
+                      },
+                      cache: false,
+                      contentType: false,
+                      processData: false,
+                  })
+                  
+      };
+      
+      $('#seeall').click(function(){
+
+        if(document.getElementById('vichliid').style.display=='flex'){
+          document.getElementById('vichliid').style.display='none';
+        document.getElementById('seeall').innerHTML='See all Posts';
+        }
+        else{
+        document.getElementById('vichliid').style.display='flex';
+        document.getElementById('seeall').innerHTML='Hide all Posts';
+        }
+      });
+
+//       function delay (URL) {
+//     setTimeout( function() { window.location = URL }, 500 );
+// }
+
+{% for it in likedpostsid %}
+if(document.getElementById('likebtn{{it}}')){
+document.getElementById('likebtn{{it}}').style.color='#0061ff';}
+
+{% endfor %}
+{% for it in likedpostsid %}
+if(document.getElementById('likebtn2{{it}}')){
+document.getElementById('likebtn2{{it}}').style.color='#0061ff';}
+
+{% endfor %}
+
+    </script>
+  </body>
+</html>

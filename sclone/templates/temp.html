@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form action="temp" method="post" enctype="multipart/form-data">
+  <!-- {% csrf_token %} -->
+        <img src="07.jpg" alt="" id="pp">
+    <input type="file" name="imge" id="imge">
+    <img src="" id="aa" alt="">
+    <input type="file" name="image" id="image">
+
+    <button type="submit">Submit</button>
+</form><button id="ddd">dvdrg</button>
+    <script>
+        // document.getElementById('image').files[0]=document.getElementById('image');
+        // document.getElementById('aa').src=document.getElementById('image').files[0]
+        var x = document.getElementById("image");
+        var y = document.getElementById("imge");
+         x.setAttribute("type", "image");
+         let az=document.getElementById("pp").src;
+
+
+         document.getElementById('ddd').addEventListener("click", function(){
+            console.log(y.files[0])
+         document.getElementById('aa').src=URL.createObjectURL(y.files[0])
+         
+         x.value= document.getElementById('aa').src
+         
+});
+
+        
+</script>
+</body>
+</html>

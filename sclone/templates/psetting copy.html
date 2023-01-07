@@ -1,0 +1,388 @@
+{% load static %}<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+  <!-- cropper -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/cropper/4.1.0/cropper.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropper/4.1.0/cropper.min.css">
+  <link rel="stylesheet" href="/static/homemobile2.css">
+  </head>
+  <style>
+    body,.farmm{
+background-color: #eff2f6;
+    }
+    .icon{
+      opacity: 0.8;
+    }
+    .navbar{
+      background-color: white;
+      /* box-shadow: 2px 2px 5px grey; */
+        min-width: 30rem;
+position: fixed;
+width: 100%;
+z-index: 10;
+top:0;
+    }
+    .container{
+        margin-top: 70px;
+        display: flex;
+        justify-content: center;
+    }
+    .navbar-collapse{
+      justify-content: space-between;
+    }
+    .mrr{
+     
+      margin-right: 5px;
+    }
+    
+    .andi2{
+      margin: auto;
+    margin-bottom: 4px;
+    /* width: 16px; */
+    font-size: 1.2rem;
+    }
+    .andi{
+      margin: auto;
+    margin-bottom: 4px;
+    opacity: 0.8;
+    font-size: 1rem;
+    }
+    .navbar-brand2 {
+      color: white;
+      
+    margin-right: 1rem;
+    border-radius: 5px;
+    width: 39px;
+    height: 36px;
+    font-size: 1rem;
+    display: flex;
+    white-space: nowrap;
+    background-color: #0f6fec;
+}
+    .navbar-brand{
+      margin-right: 1rem;
+      border-radius: 5px;
+      width: 39px;
+      height: 36px;
+      font-size: 1rem;
+      display: flex;
+      white-space: nowrap;
+    background-color: #eff2f6;
+}
+.cbi{
+  display: flex;
+  align-items: center;
+}
+.rolll{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.navbar-brand :hover{
+  color: rgb(0, 106, 255);
+  opacity: 1;
+}
+.change2{
+  
+  position: absolute;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  margin-left: 60px;
+  padding: 20px;
+ 
+  display: none;
+}
+.change{
+  
+  position: absolute;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  padding: 20px;
+ 
+  display: none;
+}
+.co:hover .change2{
+  display: flex;
+}
+.co:hover .change{
+  display: flex;
+  transition: all 0.2s ease-in-out;
+}
+.co:hover .pch{
+/* opacity: 0.8; */
+filter: blur(2px);
+transition: all 0.1s linear;
+}
+.chng{
+  text-shadow: 1px 1px 2px black;
+}
+  </style>
+  <body> {% load static %}
+    <nav class="navbar navbar-expand-lg fstnav">
+        <div class="container-fluid">
+          <a class="navbar-brand2" href="/">
+            <!-- <img class="light-mode-item navbar-brand-item" src="/static/facebook.svg" alt="logo"> -->
+            <i class="andi2 bi bi-facebook"></i>
+
+            
+            
+            
+          </a>
+           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            
+            <!-- <form class="d-flex" rol>
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              
+            </form> -->
+            <div class=" nav mt-3 mt-lg-0 flex-nowrap align-items-center px-4 px-lg-0">
+              <div class="nav-item w-100">
+                <form class="rounded position-relative">
+                  <input class="farmm form-control ps-5 bg-light" type="search" placeholder="Search..." aria-label="Search">
+                  <button class="btn bg-transparent px-2 py-0 position-absolute top-50 start-0 translate-middle-y" type="submit"><i class="icon bi bi-search fs-5"> </i></button>
+                </form>
+              </div>
+            </div>
+
+           <ul class="navbar-nav mb-2 mb-lg-0 mrr" >
+            <li class="nav-item">
+              <a class="navbar-brand" href="index.html">
+                <i class="andi bi bi-chat-left-text-fill"></i>
+             </a>
+            </li>
+            <li class="nav-item">
+              <a class="navbar-brand" href="index.html">
+                <i class="andi bi bi-bell-fill"></i>
+             </a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="navbar-brand" href="index.html">
+                <i class="andi bi bi-gear-fill"></i>
+             </a>
+              
+            </li>
+            <li class="nav-item">
+              <a class="navbar-brand" href="/settings">
+                <i class="andi bi bi-emoji-smile-fill"></i>
+             </a>
+            </li>
+          </ul>
+            
+          </div>
+        </div>
+      </nav>
+
+      <nav class="navbar navbar-dark bg-primary mobilenav" style="min-width:1rem ;">
+        <div class="allmat">
+          <div class="container-fluid">
+            <div class="d-flex navde">
+              
+            <a class="navbar-brand3" href="/">
+              <i class="bi bi-house-door-fill"></i>
+       </a>
+            <a class="navbar-brand3" href="/">
+              <i class="bi bi-search"></i>
+       </a>
+            
+            <a class="navbar-brand3" href="/">
+              <i class="bi bi-cloud-plus-fill"></i>
+       </a>
+            <a class="navbar-brand3" href="/profile/{{user_profile.user}}">
+              <i class="bi bi-person-fill"></i>
+       </a>
+       <a class="navbar-brand3" href="/psettings">
+        <i class="bi bi-gear-fill"></i>
+      </a>
+            
+      
+          </div>
+          </div>
+        </div>
+      </nav>
+
+      <main><div class="container">
+      <div class="left"></div> 
+<div class="vichli"> 
+    <div class="antra" >
+   
+        
+              <!-- Account setting tab START -->
+              <div class="tab-pane show active fade" id="nav-setting-tab-1">
+                <!-- Account settings START -->
+                <div class="card mb-4">
+                  
+                  <!-- Title START -->
+                  <div class="card-header border-0 pb-0">
+                    <h1 class="h5 card-title" style="padding: 10px;padding-bottom:7px;">Account Settings</h1>
+                    <p class="mb-0">
+                      <!-- <br> -->
+                    </p>
+                  </div>
+                  <!-- Card header START -->
+                  <!-- Card body START -->
+                  <div class="card-body">
+                    <!-- Form settings START -->
+                    <form class="row g-3" action="psettings" method="post" enctype="multipart/form-data">
+{% csrf_token %}
+<div class="flxxx" style="display: flex;">
+                        <div class="co" style="display: flex;flex-direction:column;">
+                            <label class="form-label" style="font-weight: bold;">Profile Photo</label>
+                           <img src="{{user_profile.file.url}}" alt="" width="100px" height="100px" class="pch">
+                           <div class="change">
+                            <i class="bi bi-camera"></i>
+                            <p class="chng"> <a href="/temp" style="text-decoration: none;color:white;">Change</a></p>
+                           </div>
+                          
+                          </div>
+
+                        <div class="co coo" style="display: flex;flex-direction:column;">
+                            <label class="form-label" style="font-weight: bold;">Cover Photo</label>
+                            
+                           <img src="{{user_profile.cover.url}}" alt="" width="225px" height="100px" class="pch">
+                           
+                           <div class="change2">
+                            <i class="bi bi-camera"></i>
+                            <p class="chng"><a href="/cover" style="text-decoration: none;color:white;">Change </a></p>
+                           </div>
+                           
+                          </div>
+                        </div>
+                      <!-- First name -->
+                      <div class="col-sm-6 col-lg-4">
+                        <label class="form-label">First name</label>
+                        <input type="text" class="form-control" name="fname" placeholder="John" value="{{user_profile.fname}}">
+                      </div>
+                      <!-- Last name -->
+                      <div class="col-sm-6 col-lg-4">
+                        <label class="form-label">Last name</label>
+                        <input type="text" class="form-control" name="lname" placeholder="Smith" value="{{user_profile.lname}}">
+                      </div>
+                      <br>
+                      <div class="cbi">
+                      <!-- Location -->
+                      <div class="col-sm-6 col-lg-4">
+                        <label class="form-label">Location</label>
+                        <input type="text" class="form-control" name="location" placeholder="New York" value="{{user_profile.location}}" Required>
+                      </div>
+                      <!-- Last name -->
+                      <div class="col-sm-6 col-lg-4 rolll">
+                        <div class="">
+                        <label class="form-label">Role</label>
+                        <!-- <input type="text" class="form-control" name="role" placeholder="Smith" value="{{user_profile.role}}"> -->
+
+                       <select name="role" id="rselecter" class="form-select">
+                        <option value="{{user_profile.role}}" selected>{{user_profile.role}}</option>
+                        <option value="Student">Student</option>
+                        <option value="Manager">Manager</option>
+                        <option value="Web-developer">Web-developer</option>
+                      <option value="other" id="otherrohl">other</option>
+                      </select></div>
+                      <!-- changed rolec -->
+                      <div class="col-sm-6 col-lg-4" id="ord" style="display: none;margin-left: 2%;">
+                        <label class="form-label">Other role</label>
+                        <input type="text" id="oti" class="form-control" name="changed" placeholder="Carpenter" value="{{user_profile.role}}" >
+                      </div>
+
+                      </div>
+                     
+                     </div>
+
+                      <!-- User name -->
+                      <div class="col-sm-6">
+                        <label class="form-label">User name</label>
+                        <input type="text" class="form-control" placeholder="" value="@{{user.username}}" disabled>
+                      </div>
+                      <!-- Birthday -->
+                     
+                      
+                      
+                      <div class="col-sm-6">
+                        <label class="form-label">Email</label>
+                        <input type="text" class="form-control" placeholder="" value="{{user.email}}" disabled>
+                        <!-- Add new email -->
+                        <!-- <a class="btn btn-sm btn-dashed rounded mt-2" href="#!"> <i class="bi bi-plus-circle-dotted me-1"></i>Add new email address</a> -->
+                      </div>
+                      <!-- Page information -->
+                      <div class="col-12">
+                        <label class="form-label">Overview</label>
+                        <textarea class="form-control" rows="4" name="bio" placeholder="Description (Required)" maxlength="300">{{user_profile.bio}}</textarea>
+                        <small>Character limit: 300</small>
+                      </div>
+                      <!-- Button  -->
+                      <div class="col-12 text-end">
+                        <button type="submit" class="btn btn-sm btn-primary mb-0">Save changes</button>
+                      </div>
+                    </form>
+                    <!-- Settings END -->
+                  </div>
+                <!-- Card body END -->
+                </div>
+                <!-- Account settings END -->
+  
+              
+              </div>
+
+    </div>
+  </div>
+
+
+  </div>
+<div class="right">
+  <a href="/signout">Signout</a>
+</div>
+    </div>
+
+</main>
+    
+
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js" integrity="sha512-T/tUfKSV1bihCnd+MxKD0Hm1uBBroVYBOYSk1knyvQ9VyZJpc/ALb4P0r6ubwVPSGB2GvjeoMAJJImBG12TiaQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+   
+   <script>
+
+    // $('#rselecter').click(function(){
+    //  if(document.getElementById('rselecter').value=='other'){
+    //   document.getElementById('rselecter').name='changed'
+    //   document.getElementById('oti').name='role'
+    //   document.getElementById('ord').style.display='block'
+
+    //  }else{
+    //   document.getElementById('rselecter').name='role'
+    //   document.getElementById('oti').name='changed'
+    //   document.getElementById('ord').style.display='none'
+    //  }
+
+    // })
+let eleemm=document.getElementById('rselecter');
+eleemm.onchange=function(){
+  if(document.getElementById('rselecter').value=='other'){
+      document.getElementById('rselecter').name='changed'
+      document.getElementById('oti').name='role'
+      document.getElementById('ord').style.display='block'
+
+     }else{
+      document.getElementById('rselecter').name='role'
+      document.getElementById('oti').name='changed'
+      document.getElementById('ord').style.display='none'}
+}
+
+   </script>
+  </body>
+</html>

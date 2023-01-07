@@ -1,0 +1,523 @@
+{% load static %}<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Socialbook</title>
+    <link rel="icon" type="image/png" href="/static/logo.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="/static/logo.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/static/logo.png" sizes="96x96">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/static/homemobile2.css">
+    <link rel="stylesheet" href="/static/stylenav.css">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script>
+   
+  </script>
+  </head>
+  <style>
+    body,.farmm{
+background-color: #eff2f6;
+    }
+    .icon{
+      opacity: 0.8;
+    }
+    .navbar{
+      background-color: white;
+      /* box-shadow: 2px 2px 5px grey; */
+        min-width: 1rem;
+position: fixed;
+width: 100%;
+z-index: 10;
+
+    }
+    .navbar2{
+      background-color: white;
+      /* box-shadow: 2px 2px 5px grey; */
+        min-width: 30rem;
+/* position: fixed; */
+width: 100%;
+z-index: 10;
+
+    }
+.top0{
+  top: 0;
+}
+
+   
+    .container{
+        margin-top: 70px;
+        display: flex;
+        justify-content: center;
+    }
+    .navbar-collapse{
+      justify-content: space-between;
+    }
+    .mrr{
+     
+      margin-right: 5px;
+    }
+    
+    .andi2{
+      margin: auto;
+    margin-bottom: 4px;
+    /* width: 16px; */
+    font-size: 1.2rem;
+    }
+    .andi{
+      margin: auto;
+    margin-bottom: 4px;
+    opacity: 0.8;
+    font-size: 1rem;
+    }
+    .navbar-brand2 {
+      color: white;
+      
+    margin-right: 1rem;
+    border-radius: 5px;
+    width: 39px;
+    height: 36px;
+    font-size: 1rem;
+    display: flex;
+    white-space: nowrap;
+    background-color: #0f6fec;
+}
+    .navbar-brand{
+      margin-right: 1rem;
+      border-radius: 5px;
+      width: 39px;
+      height: 36px;
+      font-size: 1rem;
+      display: flex;
+      white-space: nowrap;
+    background-color: #eff2f6;
+}
+.likediv{
+  display: flex;
+  align-items: center;
+}
+.like{
+  background: none;
+  outline: none;
+  border: 0;
+  margin-right: 0px;
+  margin-bottom: 10px;
+}
+.plink{
+  color: black;
+  font-weight: 600;
+  margin-left: 10px;
+  /* margin-bottom: 5px; */
+  font-size: 110%;
+  text-decoration: none;
+}
+.pibtn{
+  width: 2.3rem;
+    border-radius: 5px;
+}
+.navbar-brand :hover{
+  color: rgb(0, 106, 255);
+  opacity: 1;
+}
+.smb{
+ outline: none;
+ border: none;
+ padding-bottom: 4px;
+ margin: 0 10px 10px 18px;
+}
+.suggcard{
+  margin-right: 40px;
+  margin-left: 40px;
+}
+.suggphoto{
+  border-radius: 40px;
+  height: 100%;
+  /* margin: auto; */
+}
+.flx{
+display: flex;
+flex-direction: column;
+margin-top: 5px;
+justify-content: center;
+padding: 0;
+}
+.usg{
+  display: flex;
+  margin-bottom: 10px;
+}
+.usgtxt{
+  /* margin: auto; */
+  font-size: 120%;
+    font-weight: bold;
+  font-family: 'Inter',sans-serif;
+  padding: 25px;
+    padding-top: 20px;
+    padding-bottom: 5px;
+  
+}
+.dec{
+  text-decoration: none;
+  color: black;
+}
+.sugname{
+  margin: 0;
+  padding: 0;
+}
+.right{
+  margin-right: 40px;
+  border-radius: 0 ;
+}
+.topfloor{
+  background-color: white;
+  /* height: 600px; */
+  min-height: 600px;
+  max-height: 800px;
+  border-radius: 10px 10px 0 0;
+
+}
+.coveer{
+  border-radius: 10px 10px 0 0;
+  width: 100%;
+  height: 60px;
+  background-image: url('{{user_profile.cover.url}}');
+  background-size: cover;
+  margin-bottom: 50px;
+  display: flex;
+  align-items: center;
+}
+.ppp{
+  
+  margin: auto;
+  margin-top: 35px;
+  width: 64px;
+  height: 64px;
+  border-radius: 5px;
+  /* background-color: #0f6fec; */
+  border: 3px solid white;
+}
+.casew{
+  display: flex;
+  align-items: center;
+}
+.chottip{
+  width: 100%;
+  
+}
+.nav-link-secondary{
+  margin-left: 15px;
+}
+.nav-link2{
+  color: rgb(56, 56, 56);
+  display: block;
+    padding: 0;
+    font-size: var(--bs-nav-link-font-size);
+    font-weight: var(--bs-nav-link-font-weight);
+    padding: 4px;
+    text-decoration: none;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
+}
+.h-20px{
+  height: 20px;
+}
+.vppp{
+  text-decoration: none;
+  font-weight: 500;
+}
+.pmb{
+  color: gray;
+  font-size: 85%;
+  margin: auto;
+}
+.pmb2{
+  color: rgb(78, 78, 78);
+  font-size: 90%;
+  margin: auto;
+ 
+  font-weight: 400;
+  font-family: 'Inter', sans-serif;
+}
+small{
+  color: gray;
+}
+.vff{
+  font-weight: 700;
+  margin: auto;
+
+}
+.lhr{
+  margin-bottom: 1px;
+    margin-top: 30px;
+}
+.mbna{
+  font-family: 'Inter', sans-serif;
+margin: auto;
+
+}
+.caption{
+  margin-top: 0;
+  margin-left: 16px;
+    margin-bottom: 1rem;
+    font-size: 98%;
+    color: rgb(83, 83, 83);
+}
+.iopo{
+  padding: 14px;
+  padding-bottom: 0;
+}
+.desti{
+  margin-top: 0;
+    margin-left: 10px;
+    font-size: 85%;
+    margin-bottom: 1rem;
+    color: gray;
+}
+.colmd{
+  width: 26.33%;
+}
+.desti2{
+  margin-top: 0;
+    margin-left: 5px;
+    font-size: 85%;
+    margin-bottom: 1rem;
+    color: gray;
+}
+.postimgh{
+ 
+  
+    border-radius: 20px;
+    
+}
+.otln{
+  outline: none;
+  border: none;
+}
+.postprofile{
+  width: 48px;
+    height: 48px;
+    border-radius: 50px;
+    border: 2px solid rgb(255 255 255);
+}
+.divatra{
+  border: 2px solid rgb(0, 149, 255);
+    height: 52px;
+    width: 52px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    border-radius: 50px;
+}
+.plusbatno{
+  display: flex;
+  align-items: center;
+}
+.mato{
+  color: #0f6fec;
+  font-size: 150%;
+  margin-bottom: 2px;
+  margin-right: 1px;
+  transition: all 0.3s ease-in-out;
+}
+
+.plusbatn{
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.5rem;
+  width: 2.5rem;
+  border-radius: 40px;
+  background-color:rgba(15, 111, 236, 0.1);; 
+}
+.plusbatn:hover
+
+   { 
+    color: white;
+    background-color: #0f6fec;}
+    .plusbatn:hover .mato{
+      color: white;
+    }
+
+.design{
+  display: flex;
+  align-items: center;
+}
+.avatar2{
+  width: 50px;
+  height: 50px;
+}
+
+.avatar-img{
+  width: 100%;
+}
+[data-autoresize] {
+    resize: none;
+}
+.csbb{
+    outline: none;
+    border: none;
+    background-color: rgb(238 241 245);
+    border-radius: 4px;
+    height: 27px;
+    font-size: 85%;
+   }
+   .exc{
+    background-color: rgb(238 241 245);
+    border-radius: 4px;
+    height: 27px;
+    margin-bottom: 10px;
+    padding: 5px;
+    padding-top: 4px;
+   }
+   .ctxt{
+    color: #2280fa;
+    font-weight: 500;
+   }
+   .lbl{
+    font-size: 85%;
+    margin-right: 7px;
+   }
+   .lbl:hover{
+    cursor: pointer;
+   }
+  </style>
+  <body> {% load static %}
+
+    <nav class="navbar navbar-expand-lg top0 fstnav ">
+        <div class="container-fluid">
+          <a class="navbar-brand2 jsflex" href="/">
+            <img class="light-mode-item navbar-brand-item hww"  src="/static/logo.png" alt="logo">
+
+            
+            
+            
+          </a>
+           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            
+            <!-- <form class="d-flex" rol>
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              
+            </form> -->
+            <div class=" nav mt-3 mt-lg-0 flex-nowrap align-items-center px-4 px-lg-0">
+              <div class="nav-item w-100">
+                <form class="rounded position-relative" method="post" action="/search">
+                  {% csrf_token %}
+                  <input class="farmm form-control ps-5 bg-light" type="search" placeholder="Search..." aria-label="Search" name="searchu">
+                  <button class="btn bg-transparent px-2 py-0 position-absolute top-50 start-0 translate-middle-y" type="submit"><i class="icon bi bi-search fs-5"> </i></button>
+                </form>
+              </div>
+            </div>
+
+           <ul class="navbar-nav mb-2 mb-lg-0 mrr" >
+            <li class="nav-item">
+              <a class="navbar-brand" href="#">
+                <i class="andi bi bi-chat-left-text-fill"></i>
+             </a>
+            </li>
+            <li class="nav-item">
+              <a class="navbar-brand" href="upload">
+                <i class="andi bi bi-plus"></i>
+             </a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="navbar-brand" href="/psettings">
+                <i class="andi bi bi-gear-fill"></i>
+             </a>
+              
+            </li>
+            <li class="nav-item">
+              <a class="" href="/profile/{{user_profile.user}}">
+                 <!-- <i class="andi bi bi-emoji-smile-fill"></i>  -->
+                <img href="/psettings" class="pibtn" src="{{user_profile.file.url}}" alt="n">
+             </a>
+            </li>
+          </ul>
+            
+          </div>
+        </div>
+      </nav>
+<nav class="navbar fixed-top mobilenav social" style="position: absolute;">
+  <p class="socialbook">
+    Socialbook
+  </p>
+</nav>
+
+<nav class="navbar navbar-dark bg-transparent fixed-bottom mobilenav" style="min-width:1rem ;justify-content: center;padding-bottom: 0;">
+ 
+  <ul class="navigation">
+    <li class="active">
+      <a href="/">
+        <span class="icon" style="opacity: 1;">
+          <ion-icon name="home-outline"></ion-icon>
+        </span>
+        <span class="text">Home</span>
+      </a>
+    </li>
+    <li>
+      <a href="/search">
+        <span class="icon" style="opacity: 1;">
+          <!-- <ion-icon name="person-outline"></ion-icon> -->
+          <ion-icon name="search-outline"></ion-icon>
+        </span>
+        <span class="text">Search</span>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <span class="icon" style="opacity: 1;">
+          <ion-icon name="chatbubble-outline"></ion-icon>
+        </span>
+        <span class="text">Messages</span>
+      </a>
+    </li>
+    <li>
+      <a href="/profile/{{user_profile.user}}">
+        <span class="icon" style="opacity: 1;">
+          <i class="bi bi-person"></i>
+        </span>
+        <span class="text">Profile</span>
+      </a>
+    </li>
+    <li>
+      <a href="/settings">
+        <span class="icon" style="opacity: 1;">
+          <ion-icon name="settings-outline"></ion-icon>
+        </span>
+        <span class="text">Settings</span>
+      </a>
+    </li>
+    <div class="indicator"></div>
+  </ul>
+</nav>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script>
+    
+      
+   
+
+
+const list = document.querySelectorAll(".navigation li");
+    function activelink() {
+      list.forEach((item) => item.classList.remove("active"));
+      this.classList.add("active");
+    }
+    list.forEach((item) => item.addEventListener("click", activelink));
+
+    </script>
+
+
+  </body>
+</html>
+

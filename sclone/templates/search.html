@@ -1,0 +1,457 @@
+{% load static %}<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="/static/homemobile2.css">
+    <link rel="stylesheet" href="/static/search.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/static/stylenav.css">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  </head>
+  <style>
+    body,.farmm{
+background-color: #eff2f6;
+    }
+    .icon{
+      opacity: 0.8;
+    }
+    .navbar{
+      background-color: white;
+      /* box-shadow: 2px 2px 5px grey; */
+        min-width: 1rem;
+position: fixed;
+width: 100%;
+z-index: 10;
+
+    }
+    .navbar2{
+      background-color: white;
+      /* box-shadow: 2px 2px 5px grey; */
+        min-width: 30rem;
+/* position: fixed; */
+width: 100%;
+z-index: 10;
+
+    }
+.top0{
+  top: 0;
+}
+    .container{
+        margin-top: 70px;
+        display: flex;
+        justify-content: center;
+    }
+    .navbar-collapse{
+      justify-content: space-between;
+    }
+    .mrr{
+     
+      margin-right: 5px;
+    }
+    
+    .andi2{
+      margin: auto;
+    margin-bottom: 4px;
+    /* width: 16px; */
+    font-size: 1.2rem;
+    }
+    .andi{
+      margin: auto;
+    margin-bottom: 4px;
+    opacity: 0.8;
+    font-size: 1rem;
+    }
+    .navbar-brand2 {
+      color: white;
+      
+    margin-right: 1rem;
+    border-radius: 5px;
+    width: 39px;
+    height: 36px;
+    font-size: 1rem;
+    display: flex;
+    white-space: nowrap;
+    background-color: #0f6fec;
+}
+    .navbar-brand{
+      margin-right: 1rem;
+      border-radius: 5px;
+      width: 39px;
+      height: 36px;
+      font-size: 1rem;
+      display: flex;
+      white-space: nowrap;
+    background-color: #eff2f6;
+}
+.likediv{
+  display: flex;
+  align-items: center;
+}
+.like{
+  background: none;
+  outline: none;
+  border: 0;
+  margin-right: 0px;
+  margin-bottom: 10px;
+}
+.dec{
+    text-decoration: none;
+    color: black;
+}
+.plink{
+  margin-left: 10px;
+  margin-bottom: 5px;
+  font-size: 110%;
+  text-decoration: none;
+}
+.pibtn{
+  width: 2.3rem;
+    border-radius: 5px;
+} .altrap{
+    width: 150px;
+    border-radius: 50%;
+  }
+.rounded-start{
+  width: 150px;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.navbar-brand :hover{
+  color: rgb(0, 106, 255);
+  opacity: 1;
+}
+.nor1{
+    display: none;
+    max-width: 640px;
+    width: 85%;
+}
+.nor{
+   
+    display: flex;
+    align-items: center;
+}
+.nor h4{
+    margin: 10px;
+}
+
+.mato{
+  color: #0f6fec;
+  font-size: 150%;
+  margin-bottom: 2px;
+  margin-right: 1px;
+  transition: all 0.3s ease-in-out;
+}
+
+.plusbatn{
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.5rem;
+  width: 2.5rem;
+  border-radius: 40px;
+  background-color:rgba(15, 111, 236, 0.1);; 
+}
+.plusbatn:hover
+
+   { 
+    color: white;
+    background-color: #0f6fec;}
+    .plusbatn:hover .mato{
+      color: white;
+    }
+
+.mobilesearch,.sugges{
+    display: none;
+}
+@media (max-width:1000px) {
+  .mobilesearch,.sugges{
+    display: block;
+}
+
+
+}
+@media(max-width:500px){
+
+}
+@media(max-width:766px){
+  .rounded-start{
+    width: 30%;
+  }
+  .altrap{
+    width: 30%;
+    border-radius: 50%;
+  }
+}
+  </style>
+  <body> {% load static %}
+    <nav class="navbar navbar-expand-lg top0 fstnav ">
+      <div class="container-fluid">
+        <a class="navbar-brand2 jsflex" href="/">
+          <img class="light-mode-item navbar-brand-item hww"  src="/static/logo.png" alt="logo">
+
+          
+          
+          
+        </a>
+         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          
+          <!-- <form class="d-flex" rol>
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            
+          </form> -->
+          <div class=" nav mt-3 mt-lg-0 flex-nowrap align-items-center px-4 px-lg-0">
+            <div class="nav-item w-100">
+              <form class="rounded position-relative" method="post" action="/search">
+                {% csrf_token %}
+                <input class="farmm form-control ps-5 bg-light" type="search" placeholder="Search..." aria-label="Search" name="searchu">
+                <button class="btn bg-transparent px-2 py-0 position-absolute top-50 start-0 translate-middle-y" type="submit"><i class="icon bi bi-search fs-5"> </i></button>
+              </form>
+            </div>
+          </div>
+
+         <ul class="navbar-nav mb-2 mb-lg-0 mrr" >
+          
+          <li class="nav-item">
+            <a class="navbar-brand" href="#" role="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              <i class="andi bi bi-plus"></i>
+             
+
+           </a>
+          
+          </li>
+          
+          <li class="nav-item">
+            <a class="navbar-brand" href="#">
+              <i class="andi bi bi-chat-left-text-fill"></i>
+           </a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="navbar-brand" href="/psettings">
+              <i class="andi bi bi-gear-fill"></i>
+           </a>
+            
+          </li>
+          <li class="nav-item">
+            <a class="" href="/profile/{{user_profile.user}}">
+               <!-- <i class="andi bi bi-emoji-smile-fill"></i>  -->
+              <img href="/psettings" class="pibtn" src="{{user_profile.file.url}}" alt="n">
+           </a>
+          </li>
+        </ul>
+          
+        </div>
+      </div>
+    </nav>
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Upload Post</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form action="upload" method="post" enctype="multipart/form-data">
+              {% csrf_token %}
+
+              <div class="mb-3">
+                <label for="image" class="form-label">Photo</label>
+                <input type="file" class="form-control" name="uphoto" id="image" placeholder="name@example.com">
+              </div>
+              <div class="mb-3">
+                <label for="txt" class="form-label">Caption Here</label>
+                <textarea class="form-control" id="txt" name="caption" placeholder="caption here..." rows="3"></textarea>
+              </div>
+
+                    
+                      
+                      
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                      </div>
+                  </form>
+          </div>
+         
+        </div>
+      </div>
+    </div>
+
+      <nav class="navbar fixed-top mobilenav social" style="position: absolute;">
+        <p class="socialbook">
+          Socialbook
+        </p>
+      </nav>
+      
+      <nav class="navbar navbar-dark bg-transparent fixed-bottom mobilenav" style="min-width:1rem ;justify-content: center;padding-bottom: 0;">
+       
+        <ul class="navigation">
+          <li >
+            <a href="/">
+              <span class="icon" style="opacity: 1;">
+                <ion-icon name="home-outline"></ion-icon>
+              </span>
+            
+            </a>
+          </li>
+          <li class="active">
+            <a href="/search">
+              <span class="icon" style="opacity: 1;">
+                <!-- <ion-icon name="person-outline"></ion-icon> -->
+                <ion-icon name="search-outline"></ion-icon>
+              </span>
+          
+            </a>
+          </li>
+          <li>
+            <a href="/chat">
+              <span class="icon" style="opacity: 1;">
+                <ion-icon name="chatbubble-outline"></ion-icon>
+              </span>
+              <!-- <span class="text">Messages</span> -->
+            </a>
+          </li>
+          <li>
+            <a href="/profile/{{user_profile.user}}">
+              <span class="icon" style="opacity: 1;">
+                <i class="bi bi-person"></i>
+              </span>
+              <!-- <span class="text">Profile</span> -->
+            </a>
+          </li>
+          <li>
+            <a href="/psettings">
+              <span class="icon" style="opacity: 1;">
+                <ion-icon name="settings-outline"></ion-icon>
+              </span>
+              <!-- <span class="text">Settings</span> -->
+            </a>
+          </li>
+          <div class="indicator"></div>
+        </ul>
+      </nav>
+
+     
+
+
+      <div class="container">
+
+        <div class="nav-item w-100 mb-3 mobilesearch">
+          <form class="rounded position-relative" method="post" action="/search">
+            {% csrf_token %}
+            <input class="farmm form-control ps-5 bg-light" type="search" placeholder="Search..." aria-label="Search" name="searchu">
+            <button class="btn bg-transparent px-2 py-0 position-absolute top-50 start-0 translate-middle-y" type="submit"><i class="icon bi bi-search fs-5"> </i></button>
+          </form>
+        </div>
+
+        {% if on  %}
+        <div class="sugges" style="width: 90%;max-width:640px;">
+          <p class="whoto">Who to Follow</p>
+          <hr>
+          <div class="intall">
+            {% for p in lsugg %}
+            <div class="roww"> <a href="/profile/{{p.user}}" class="dec">
+              <div class="d-flex" style="width: 15vw;height: 15vw;max-width: 100px;max-height: 100px;">
+               
+              <img src="{{p.file.url}}" alt="" class="immmase" style="width: 100%;">
+              <div class="namtepta">
+                <p class="namama">{{p.user}}</p>
+                <p class="chottilo" id="chotoloc{{forloop.counter}}">{{p.location}}</p>
+              </div>
+            
+            </div>
+            
+              <div class="plusbatn">
+                <a href="/profile/{{p.user}}">
+                <i class="bi bi-plus mato"></i></a>
+              </div>
+            
+            </a>
+
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+        {% endif %}
+        
+
+       {% for p in usplist %}
+       
+       <div class="card mb-2" style="width: 85%;max-width: 640px;">
+           
+        <div class="card" style="width: 100%;">
+          <div class="row g-0">
+            <div class="col-md-4 d-flex">
+              <img src="{{p.file.url}}" class="img-fluid rounded-start " alt="...">
+              <div class="col-md-8">
+                <div class="card-body">
+                  <a class="dec" href="/profile/{{p.user}}">
+                  <h5 class="card-title">{{p.user}}</h5></a>
+                  <p class="card-text">{{p.location}}
+  
+                  </p>
+                </div>
+              </div>
+            </div>
+           
+          </div>
+        </div>
+
+    </div>
+
+       {% endfor %}
+
+       <div class="card nor1 mb-2" id="nfour"  style="max-width: 640px;width: 85%;">
+           
+        <div class="card nor">
+         <h4>No results found</h4>
+          </div>
+        </div>
+        
+     
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script>
+
+
+      if({{on}}==0){
+     {% if usplist|length  %}
+     document.getElementById('nfour').style.display='none';
+     {% else %}
+     document.getElementById('nfour').style.display='block';
+ 
+
+     {% endif %}}
+     else{
+
+
+     }
+
+     for(let i=1;i<={{lsugg|length}};i++){
+      let loc=document.getElementById('chotoloc'+i).innerHTML+"";
+     
+      let m=loc.split(/[-," ",/,_,]/);
+      // JSON.stringify(m[0])
+      document.getElementById('chotoloc'+i).innerHTML= m[0];
+     }
+     
+    //  let loc=document.getElementById('chotoloc')+"";
+
+
+ 
+    </script>
+  </body>
+</html>

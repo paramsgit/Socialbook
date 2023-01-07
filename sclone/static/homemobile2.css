@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap');
+
+/* nonmobile */
+.jsflex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.hww{
+    width: 25px;
+    height: 25px;
+}
+.vichlacard{
+    width: 33rem;
+   
+}
+.profilenone{
+    width: 100%;
+}
+.mobilesearch{
+    display: none;
+}
+.mobilenav2,.mobilenav,.mobileprofile{
+    display: none;
+}
+.antra{
+    width: 60rem;
+}
+.coo{
+    margin-left: 50px;
+}
+
+
+/* nomobileend */
+
+@media(max-width:1200px){
+    .right{
+        display: none;
+    }
+    .mario{
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media(max-width:1000px){
+.mobilenav{
+    display: flex;
+    background-color: #0f6fec;
+}
+.mobilenav2{
+    display: block;
+    position: fixed;
+    width: 100%;
+    z-index: 9;
+    bottom: 0;
+    background-color: #0f6fec;
+}
+.mobilesearch{
+    display: block;
+}
+.navde{
+    margin-left: 25px;
+    margin-right: 25px;
+    font-size: 130%;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar-brand3{
+    /* background-color: transparent; */
+    color: white;
+}
+.coo{
+    margin-left: 5%;
+}
+
+    .left{
+        display: none;
+    }
+    .vichlacard{
+        width: 100%;
+    }
+    .vichli{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+   .fstnav{
+    display: none;
+   }
+   .exc{
+   font-size: 80%!important; 
+   }
+   .csbb{
+    font-size: 80%!important;
+   }
+   .antra{
+    width: auto;
+   }
+   .profilenone{
+    display: none;
+   }
+   .mobileprofile{
+    display: block;
+   }
+   @keyframes wiper {
+	0% {
+		transform: translateY(-40px);
+	}
+	
+	
+	100% {
+		transform: translateY(0px);
+	}
+}
+
+   .social{
+    background-color: transparent;
+    border-radius: 0px 0px 50px 50px;
+    display: flex;
+    justify-content: center;
+    /* margin-top: -36px; */
+    transition: all 0.3s;
+    /* transform: translateY(36px); */
+    /* animation: wiper 1s; */
+   }
+   .socialbook{
+    padding: 17px;
+    padding-bottom: 0;
+    color: #0080ff;
+    padding-top: 0;
+    margin-bottom: 0;
+    font-size: 200%;
+    font-family: Poppins;
+    font-weight: 700;
+    
+   }
+   .container{
+    margin-top: 80px!important;
+    margin-bottom: 80px!important;
+   }
+}
+

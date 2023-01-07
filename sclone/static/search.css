@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+
+
+@media(max-width:1000px){
+
+    .roww{ padding: 8px 20px;
+        display: flex;
+        align-items: center;
+        margin: 5px;
+        background-color: white;
+        justify-content: space-between;
+        
+    }
+    .namama{
+        color: rgb(14, 13, 13);
+        font-weight: bold;
+        font-family: Inter;
+        font-size: 130%;
+        margin-bottom: 0;
+    }
+    .chottilo{
+        color: gray;
+        margin-bottom: 0;
+    }
+    .namtepta{
+        margin: 10px;
+        display: flex;
+        flex-direction: column;
+    }
+    .immmase{
+        border-radius: 50px;
+    }
+    .whoto{
+        font-size: 150%;
+        font-family: Inter;
+        padding: 10px 5px 0 20px;
+        font-weight: bold;
+    }
+    .sugges{
+        background-color: white;
+    }
+    
+}

@@ -1,0 +1,892 @@
+{% load static %}<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Socialbook</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/static/homemobile2.css">
+    <link rel="stylesheet" href="/static/stylenav.css">
+    <link rel="icon" type="image/png" href="/static/logo.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="/static/logo.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/static/logo.png" sizes="96x96">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script>
+   
+  </script>
+  </head>
+  <style>
+    body,.farmm{
+background-color: #eff2f6;
+    }
+    .icon{
+      opacity: 0.8;
+    }
+    .navbar{
+      background-color: white;
+      /* box-shadow: 2px 2px 5px grey; */
+        min-width: 1rem;
+position: fixed;
+width: 100%;
+z-index: 10;
+
+    }
+    .navbar2{
+      background-color: white;
+      /* box-shadow: 2px 2px 5px grey; */
+        min-width: 30rem;
+/* position: fixed; */
+width: 100%;
+z-index: 10;
+
+    }
+.top0{
+  top: 0;
+}
+
+   
+    .container{
+        margin-top: 70px;
+        display: flex;
+        justify-content: center;
+    }
+    .navbar-collapse{
+      justify-content: space-between;
+    }
+    .mrr{
+     
+      margin-right: 5px;
+    }
+    
+    .andi2{
+      margin: auto;
+    margin-bottom: 4px;
+    /* width: 16px; */
+    font-size: 1.2rem;
+    }
+    .andi{
+      margin: auto;
+    margin-bottom: 4px;
+    opacity: 0.8;
+    font-size: 1rem;
+    }
+    .navbar-brand2 {
+      color: white;
+      
+    margin-right: 1rem;
+    border-radius: 5px;
+    width: 39px;
+    height: 36px;
+    font-size: 1rem;
+    display: flex;
+    white-space: nowrap;
+    background-color: #0f6fec;
+}
+    .navbar-brand{
+      margin-right: 1rem;
+      border-radius: 5px;
+      width: 39px;
+      height: 36px;
+      font-size: 1rem;
+      display: flex;
+      white-space: nowrap;
+    background-color: #eff2f6;
+}
+.likediv{
+  display: flex;
+  align-items: center;
+}
+.like{
+  background: none;
+  outline: none;
+  border: 0;
+  margin-right: 0px;
+  margin-bottom: 10px;
+}
+.plink{
+  color: black;
+  font-weight: 600;
+  margin-left: 10px;
+  /* margin-bottom: 5px; */
+  font-size: 110%;
+  text-decoration: none;
+}
+.pibtn{
+  width: 2.3rem;
+    border-radius: 5px;
+}
+.navbar-brand :hover{
+  color: rgb(0, 106, 255);
+  opacity: 1;
+}
+.smb{
+ outline: none;
+ border: none;
+ padding-bottom: 4px;
+ margin: 0 10px 10px 18px;
+}
+.suggcard{
+  margin-right: 40px;
+  margin-left: 40px;
+}
+.suggphoto{
+  border-radius: 40px;
+  height: 100%;
+  /* margin: auto; */
+}
+.flx{
+display: flex;
+flex-direction: column;
+margin-top: 5px;
+justify-content: center;
+padding: 0;
+}
+.usg{
+  display: flex;
+  margin-bottom: 10px;
+}
+.usgtxt{
+  /* margin: auto; */
+  font-size: 120%;
+    font-weight: bold;
+  font-family: 'Inter',sans-serif;
+  padding: 25px;
+    padding-top: 20px;
+    padding-bottom: 5px;
+  
+}
+.dec{
+  text-decoration: none;
+  color: black;
+}
+.sugname{
+  margin: 0;
+  padding: 0;
+}
+.right{
+  margin-right: 40px;
+  border-radius: 0 ;
+}
+.topfloor{
+  background-color: white;
+  /* height: 600px; */
+  min-height: 600px;
+  max-height: 800px;
+  border-radius: 10px 10px 0 0;
+
+}
+.coveer{
+  border-radius: 10px 10px 0 0;
+  width: 100%;
+  height: 60px;
+  background-image: url('{{user_profile.cover.url}}');
+  background-size: cover;
+  margin-bottom: 50px;
+  display: flex;
+  align-items: center;
+}
+.ppp{
+  
+  margin: auto;
+  margin-top: 35px;
+  width: 64px;
+  height: 64px;
+  border-radius: 5px;
+  /* background-color: #0f6fec; */
+  border: 3px solid white;
+}
+.casew{
+  display: flex;
+  align-items: center;
+}
+.chottip{
+  width: 100%;
+  
+}
+.nav-link-secondary{
+  margin-left: 15px;
+}
+.nav-link2{
+  color: rgb(56, 56, 56);
+  display: block;
+    padding: 0;
+    font-size: var(--bs-nav-link-font-size);
+    font-weight: var(--bs-nav-link-font-weight);
+    padding: 4px;
+    text-decoration: none;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
+}
+.h-20px{
+  height: 20px;
+}
+.vppp{
+  text-decoration: none;
+  font-weight: 500;
+}
+.pmb{
+  color: gray;
+  font-size: 85%;
+  margin: auto;
+}
+.pmb2{
+  color: rgb(78, 78, 78);
+  font-size: 90%;
+  margin: auto;
+ 
+  font-weight: 400;
+  font-family: 'Inter', sans-serif;
+}
+small{
+  color: gray;
+}
+.vff{
+  font-weight: 700;
+  margin: auto;
+
+}
+.lhr{
+  margin-bottom: 1px;
+    margin-top: 30px;
+}
+.mbna{
+  font-family: 'Inter', sans-serif;
+margin: auto;
+
+}
+.caption{
+  margin-top: 0;
+  margin-left: 16px;
+    margin-bottom: 1rem;
+    font-size: 98%;
+    color: rgb(83, 83, 83);
+}
+.iopo{
+  padding: 14px;
+  padding-bottom: 0;
+}
+.desti{
+  margin-top: 0;
+    margin-left: 10px;
+    font-size: 85%;
+    margin-bottom: 1rem;
+    color: gray;
+}
+.colmd{
+  width: 26.33%;
+}
+.desti2{
+  margin-top: 0;
+    margin-left: 5px;
+    font-size: 85%;
+    margin-bottom: 1rem;
+    color: gray;
+}
+.postimgh{
+ 
+  
+    border-radius: 20px;
+    
+}
+.otln{
+  outline: none;
+  border: none;
+}
+.postprofile{
+  width: 48px;
+    height: 48px;
+    border-radius: 50px;
+    border: 2px solid rgb(255 255 255);
+}
+.divatra{
+  border: 2px solid rgb(0, 149, 255);
+    height: 52px;
+    width: 52px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    border-radius: 50px;
+}
+.plusbatno{
+  display: flex;
+  align-items: center;
+}
+.mato{
+  color: #0f6fec;
+  font-size: 150%;
+  margin-bottom: 2px;
+  margin-right: 1px;
+  transition: all 0.3s ease-in-out;
+}
+.social{
+  animation: wiper 1s;
+}
+
+.plusbatn{
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.5rem;
+  width: 2.5rem;
+  border-radius: 40px;
+  background-color:rgba(15, 111, 236, 0.1);; 
+}
+.plusbatn:hover
+
+   { 
+    color: white;
+    background-color: #0f6fec;}
+    .plusbatn:hover .mato{
+      color: white;
+    }
+
+.design{
+  display: flex;
+  align-items: center;
+}
+.avatar2{
+  width: 50px;
+  height: 50px;
+}
+
+.avatar-img{
+  width: 100%;
+}
+[data-autoresize] {
+    resize: none;
+}
+.csbb{
+    outline: none;
+    border: none;
+    background-color: rgb(238 241 245);
+    border-radius: 4px;
+    height: 27px;
+    font-size: 85%;
+   }
+   .exc{
+    background-color: rgb(238 241 245);
+    border-radius: 4px;
+    height: 27px;
+    margin-bottom: 10px;
+    padding: 5px;
+    padding-top: 4px;
+   }
+   .ctxt{
+    color: #2280fa;
+    font-weight: 500;
+   }
+   .lbl{
+    font-size: 85%;
+    margin-right: 7px;
+   }
+   .lbl:hover{
+    cursor: pointer;
+   }
+body{
+  display: block!important;
+}
+  </style>
+  <body style="display: none;"> {% load static %}
+
+    <nav class="navbar navbar-expand-lg top0 fstnav ">
+        <div class="container-fluid">
+          <a class="navbar-brand2 jsflex" href="/">
+            <img class="light-mode-item navbar-brand-item hww"  src="/static/logo.png" alt="logo">
+
+            
+            
+            
+          </a>
+           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            
+            <!-- <form class="d-flex" rol>
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              
+            </form> -->
+            <div class=" nav mt-3 mt-lg-0 flex-nowrap align-items-center px-4 px-lg-0">
+              <div class="nav-item w-100">
+                <form class="rounded position-relative" method="post" action="/search">
+                  {% csrf_token %}
+                  <input class="farmm form-control ps-5 bg-light" type="search" placeholder="Search..." aria-label="Search" name="searchu">
+                  <button class="btn bg-transparent px-2 py-0 position-absolute top-50 start-0 translate-middle-y" type="submit"><i class="icon bi bi-search fs-5"> </i></button>
+                </form>
+              </div>
+            </div>
+
+           <ul class="navbar-nav mb-2 mb-lg-0 mrr" >
+            
+            <li class="nav-item">
+              <a class="navbar-brand" href="#" role="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                <i class="andi bi bi-plus"></i>
+               
+
+             </a>
+            
+            </li>
+            
+            <li class="nav-item">
+              <a class="navbar-brand" href="/chat">
+                <i class="andi bi bi-chat-left-text-fill"></i>
+             </a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="navbar-brand" href="/psettings">
+                <i class="andi bi bi-gear-fill"></i>
+             </a>
+              
+            </li>
+            <li class="nav-item">
+              <a class="" href="/profile/{{user_profile.user}}">
+                 <!-- <i class="andi bi bi-emoji-smile-fill"></i>  -->
+                <img href="/psettings" class="pibtn" src="{{user_profile.file.url}}" alt="n">
+             </a>
+            </li>
+          </ul>
+            
+          </div>
+        </div>
+      </nav>
+
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Upload Post</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form action="upload" method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+
+                <div class="mb-3">
+                  <label for="image" class="form-label">Photo</label>
+                  <input type="file" class="form-control" name="uphoto" id="image" placeholder="name@example.com">
+                </div>
+                <div class="mb-3">
+                  <label for="txt" class="form-label">Caption Here</label>
+                  <textarea class="form-control" id="txt" name="caption" placeholder="caption here..." rows="3"></textarea>
+                </div>
+
+                      
+                        
+                        
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                          <button type="submit" class="btn btn-primary">Submit</button>
+                        </div>
+                    </form>
+            </div>
+           
+          </div>
+        </div>
+      </div>
+<nav class="navbar fixed-top mobilenav social" style="position: absolute;">
+  <p class="socialbook">
+    Socialbook
+  </p>
+</nav>
+
+<nav class="navbar navbar-dark bg-transparent fixed-bottom mobilenav" style="min-width:1rem ;justify-content: center;padding-bottom: 0;">
+ 
+  <ul class="navigation">
+    <li class="active">
+      <a href="/">
+        <span class="icon" style="opacity: 1;">
+          <ion-icon name="home-outline"></ion-icon>
+        </span>
+      
+      </a>
+    </li>
+    <li>
+      <a href="/search">
+        <span class="icon" style="opacity: 1;">
+          <!-- <ion-icon name="person-outline"></ion-icon> -->
+          <ion-icon name="search-outline"></ion-icon>
+        </span>
+        
+      </a>
+    </li>
+    <li>
+      <a href="/chat">
+        <span class="icon" style="opacity: 1;">
+          <ion-icon name="chatbubble-outline"></ion-icon>
+        </span>
+      
+      </a>
+    </li>
+    <li>
+      <a href="/profile/{{user_profile.user}}">
+        <span class="icon" style="opacity: 1;">
+          <i class="bi bi-person"></i>
+        </span>
+        
+      </a>
+    </li>
+    <li>
+      <a href="/psettings">
+        <span class="icon" style="opacity: 1;">
+          <ion-icon name="settings-outline"></ion-icon>
+        </span>
+  
+      </a>
+    </li>
+    <div class="indicator"></div>
+  </ul>
+</nav>
+
+
+
+
+
+      <main><div class="container">
+
+        <div class="right " style="width: 17rem;">
+          <div class="topfloor">
+            <div class="coveer">
+              <div class="ppp">
+                <img class="chottip" src="{{user_profile.file.url}}" alt="">
+              </div>
+             
+            </div>
+<div class="flx">
+           <h5 class="mb-0 mbna">{{user_profile.fname}} {{user_profile.lname}}</h5></div>
+<div class="flx">
+           <p class="mb-0 pmb">{{user_profile.role}} at {{user_profile.location}}</p></div>
+
+<div class="flx " style="width: 16rem;margin-left: 10px;margin-right: 10px;">
+          <p class="mb-0 pmb2" >{{user_profile.bio}}</p></div>
+
+<div class="flx ">
+  <div class="hstack gap-2 gap-xl-3 justify-content-center" style="margin-top: 20px;">
+    <!-- User stat item -->
+    <div class="flx">
+      <h6 class="mb-0 vff">{{noofposts}}</h6>
+      <small>Post</small>
+    </div>
+    <!-- Divider -->
+    <div class="vr"></div>
+    <!-- User stat item -->
+    <div class="flx">
+      <h6 class="mb-0 vff">{{user_followers}}</h6>
+      <small>Followers</small>
+    </div>
+    <!-- Divider -->
+    <div class="vr"></div>
+    <!-- User stat item -->
+    <div class="flx">
+      <h6 class="mb-0 vff">{{user_following}}</h6>
+      <small>Following</small>
+    </div>
+  </div></div>
+
+  <hr style="width: 85%;margin-left:auto;margin-right:auto ;">
+
+  <ul class="nav nav-link-secondary flex-column fw-bold gap-2" style="margin-top: 10px;">
+    <li class="nav-item">
+      <a class="nav-link2" href="/"> <img class="me-2 h-20px fa-fw" src="/static/home-outline-filled.svg" alt=""><span>Feed </span></a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link2" href="/youfollows"> <img class="me-2 h-20px fa-fw" src="/static/person-outline-filled.svg" alt=""><span>Friends </span></a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link2" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal"> <img class="me-2 h-20px fa-fw" src="/static/earth-outline-filled.svg" alt=""><span>New Post </span></a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-link2" href="/chat"> <img class="me-2 h-20px fa-fw" src="/static/chat-outline-filled.svg" alt=""><span>Messages</span></a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link2" href="/signout"> <img class="me-2 h-20px fa-fw" src="/static/logout.png" alt=""><span>Signout </span></a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link2" href="/psettings"> <img class="me-2 h-20px fa-fw" src="/static/cog-outline-filled.svg" alt=""><span>Settings </span></a>
+    </li>
+  </ul>
+
+  <hr class="lhr">
+
+  <div class="card-footer text-center py-2">
+    <a class="btn btn-link btn-sm vppp" href="/profile/{{user_profile.user}}" >View Profile </a>
+  </div>
+
+
+          </div>
+          
+        
+        </div>
+
+<div class="vichli"> 
+
+  <!-- Share feed START -->
+  <div class="card card-body vichlacard mb-3" style="padding-bottom: 0;">
+    <div class="d-flex ">
+      
+       <form class="w-100" action="/upload" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <!-- Avatar -->
+
+<div class="d-flex">
+      <div class="avatar avatar2 avatar-xs me-2">
+        <a href="#"> <img class="avatar-img rounded-circle" src="{{user_profile.file.url}}" alt=""> </a>
+      </div>
+        <textarea class="form-control pe-4 border-0" name="caption" id="txt" rows="2" data-autoresize placeholder="Share your thoughts..." required></textarea></div>
+        <div style="margin-top: 30px; display: flex;justify-content: space-between;" >
+        <div class="anoder">
+          <label for="imajee" class="lbl" >
+            <div class="d-flex exc" id="excce">
+           <i class="bi bi-image-fill text-success pe-2"></i><p class="ctxt">Photo</p></div></label>
+          <label for="feel"  class="lbl">
+            <div class="d-flex exc" id="feellabel">
+<i class="bi bi-emoji-smile-fill text-warning pe-2"></i><p class="ctxt" id="feeltext">Feeling</p>
+<select name="feel" id="feelinga" style="display: none;">
+  
+  
+  <option value="sad">Happy</option>
+  <option value="sad">Proud</option>
+  <option value="sad">Alone</option>
+  <option value="sad">Harash</option>
+  <option value="sad">Relaxed</option>
+  <option value="sad">Tired</option>
+</select>
+</div></label>
+          <label for="x" class="lbl">
+            <div class="d-flex exc">
+           <i class="bi bi-calendar2-event-fill text-danger pe-2"></i><p class="ctxt">Event</p></div></label>
+           <input type="file" name="uphoto" id="imajee" style="visibility: hidden;width: 1px;">
+        </div>
+          <button type="submit" class="csbb" style="margin-top: 4px;">
+            <div class="d-flex" style="margin-top: 2px;">
+              <i class="bi bi-bullseye" style="    color: #de4343;"></i> <p class="ctxt" style="margin-left: 6px;">Submit</p></div>
+            </button>
+        </div>
+     
+    </form>
+  </div>
+    <!-- Share feed toolbar END -->
+  </div>
+  <!-- Share feed END -->
+  
+
+  {% for post in posts reversed %}
+  
+  <div id=""></div>
+  <div class="card vichlacard" style="margin-bottom: 20px;">
+<div class="iopo" style="display: flex;">
+  <div class="divatra">
+<img src="/static/07.jpg" alt="" class="postprofile" id="cardio{{forloop.counter}}" name="{{post.user}}"></div>
+
+<div class="div" style="display: flex;flex-direction:column;">
+  <a class="plink" href="profile/{{post.user}}">{{post.user}}</a>
+  <div class="design"><p class="desti" id="parole{{forloop.counter}}">Student</p><p class="desti2">at</p><p class="desti2" id="palocasion{{forloop.counter}}">Sahara</p></div>
+  
+</div>
+</div>
+
+<p class="card-text caption">{{post.caption}}</p>
+{% if post.image %}
+<div class="" style="padding: 15px;padding-top:0;padding-bottom: 0;">
+
+  
+    <img src="{{post.image.url}}" class="card-img-top postimgh" alt="..."></div>{% endif %}
+    <div class="card-body" id="divToReload">
+      <div class="up" id="inr" style="display: flex;justify-content:space-between;">
+        <div class="likediv">
+          <form action="/like_post" id="formforlike{{post.id}}" style="display: none;">
+            {% csrf_token %}
+    {{form.as_p}}
+          </form>
+
+  <div class="casew" id="m{{post.id}}">
+          <button class="like" id="likebtn{{post.id}}" value="{{post.id}}" onclick="doaba(this.id)" ><i class="andi2 bi bi-hand-thumbs-up-fill"></i></button>
+      <h5 class="card-title" id="l{{post.id}}">{{post.likes}}</h5></div></div>
+
+    <p>{{post.tam}}</p>
+    </div>
+     
+      
+    </div>
+  </div>
+ 
+  {% endfor %}
+
+ {% if posts|length == 0 %}
+ <div class="card vichlacard" style="margin-bottom: 20px;">
+  <div class="iopo" style="display: flex;">
+    <div class="divatra">
+  <img src="/static/logo.png" alt="" class="postprofile" id="socialbook_0_following" name=""></div>
+  
+  <div class="div" style="display: flex;flex-direction:column;">
+    <a class="plink"">Socialbook</a>
+    <div class="design"><p class="desti" id="szf">Since 2020</p></div>
+    
+  </div>
+  </div>
+  
+  <p class="card-text caption" style="font-size: 110%;">Follow some users to see their posts.</p>
+ 
+      <div class="card-body" id="divToReload">
+        <div class="up" id="inr" style="display: flex;justify-content:space-between;">
+         
+  
+      
+      </div>
+       
+        
+      </div>
+    </div>
+ {% endif %}
+   
+
+
+
+  </div>
+
+
+<div class="left">
+  <div class="card suggcard" style="width: 18rem;">
+    <div class="usg ">
+    <h5 class="usgtxt">Who to Follow</h4>
+      <hr></div>
+{% for items in lsugg  %}
+
+
+  <div class="card smb mb-2" style="width: 90%;">
+   
+    <div class="card otln" >
+      <div class="row g-0" style="height: 3.5rem;">
+        <div class="col-md-4 colmd" style="height: 3.5rem;">
+          <img src="{{items.file.url}}" class="img-fluid suggphoto" alt="..." >
+        </div>
+        <div class="col-md-8 plusbatno">
+          <div class="card-body flx">
+            <a class="dec" href="/profile/{{items.user}}">
+            <h5 class="card-title sugname">{{items.user}}</h5></a>
+            <p class="mb-0 pmb" style="margin-left: 0;">{{items.location}}</p>
+            <!-- <button class="btn btn-primary btn-sm">Follow</button> -->
+          </div>
+          <div class="plusbatn">
+            <a href="/profile/{{items.user}}">
+            <i class="bi bi-plus mato"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+</div>
+
+
+{% endfor %}
+
+</div>
+  
+</div> 
+
+    </div>
+
+</main>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script>
+    
+      
+      let imgurls=new Map();
+      let kamm=new Map()
+      let locasion=new Map();
+      {% for qq in postuserdata reversed %}
+imgurls.set('{{qq.user}}','{{qq.file.url}}')
+kamm.set('{{qq.user}}','{{qq.role}}')
+locasion.set('{{qq.user}}','{{qq.location}}')
+
+
+{% endfor %}
+
+for(let i=1;i<={{posts|length}};i++){
+  juser=document.getElementById('cardio'+i).name
+  document.getElementById('cardio'+i).src=imgurls.get(juser)
+  document.getElementById('parole'+i).innerHTML=kamm.get(juser)
+  document.getElementById('palocasion'+i).innerHTML=locasion.get(juser)
+  // console.log(document.getElementById('cardio'+1).src)
+  console.log(imgurls.get(juser))
+}
+
+
+{% comment %} 
+  {% endcomment %}
+
+function doaba(e) {
+  
+  console.log(e)
+// e.preventDefault()
+// let postid=document.getElementById('e').value;
+let postid=e.slice(7)
+
+
+console.log(postid)
+let imageform=document.getElementById(`formforlike`+postid)
+
+let csrf = document.getElementsByName('csrfmiddlewaretoken')
+
+let user= '{{user_profile.user}}'
+const fd = new FormData();
+            fd.append('csrfmiddlewaretoken', csrf[0].value)
+            fd.append('postid',postid)
+            fd.append('username',user)
+
+
+
+            $.ajax({
+                type:'POST',
+                url: imageform.action,
+                enctype: 'multipart/form-data',
+                data: fd,
+                success: function(response){
+                    console.log('success', response)
+                    // $('#formforlike'+postid)[0].reset();
+                    let zz=JSON.stringify(response)
+                    let nl=document.getElementById(`l${postid}`).innerHTML
+                   document.getElementById(`l${postid}`).innerHTML=zz[11]
+                   if(zz[11]>nl){
+                    document.getElementById(`likebtn${postid}`).style.color='#0061ff';}
+                    else{
+                      document.getElementById(`likebtn${postid}`).style.color='black';  
+                    }
+                    // e.preventDefault()
+                },
+                error: function(error){
+                    console.log('error', error)
+                    
+                },
+                cache: false,
+                contentType: false,
+                processData: false,
+            })
+            
+};
+
+{% for it in likedpostsid %}
+if(document.getElementById('likebtn{{it}}')){
+document.getElementById('likebtn{{it}}').style.color='#0061ff';}
+
+{% endfor %}
+
+$('#imajee').change(function() {
+  let file = $('#imajee')[0].files[0].name;
+   document.getElementById('excce').style.border='2px solid green';
+});
+
+
+    </script>
+  </body>
+</html>
+
