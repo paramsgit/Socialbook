@@ -387,6 +387,16 @@ margin: auto;
    .lbl:hover{
     cursor: pointer;
    }
+   .readmore{
+outline: none;
+border: none;
+background-color: rgba(245, 222, 179, 0);
+color: #0f6fec;
+   }
+   .mwirld{
+    margin-left: 5px;
+    margin-bottom: 0;
+   }
 body{
   display: block!important;
 }
@@ -673,7 +683,44 @@ body{
     <!-- Share feed toolbar END -->
   </div>
   <!-- Share feed END -->
+
+  {% if response_code == 200 %}
   
+  <div class="card vichlacard" style="margin-bottom: 20px;">
+    <div class="iopo" style="display: flex;">
+      <div class="divatra">
+    <img src="/static/nasalogo.png" alt="" class="postprofile" id="socialbook_0_following" name=""></div>
+    
+    <div class="div" style="display: flex;flex-direction:column;">
+      <a class="plink"">{{parsed.copyright}}</a>
+      <div class="design"><p class="desti" id="szf">Picture of the day</p></div>
+      
+    </div>
+    </div>
+
+    <div class="d-flex caption mb-0 align-items-baseline"><h6>Title : </h6><p class="mwirld"> {{parsed.title}}</p></div>
+    <p class="card-text caption " id="explanationofimage" style="font-size: 110%;">
+     
+    <!-- {{parsed.explanation}} -->
+    <button class="readmore" onclick="fullread()">read more</button>
+     
+    </p>
+    <div class="" style="padding: 15px;padding-top:0;padding-bottom: 0;">
+
+  
+      <img src="{{parsed.hdurl}}" class="card-img-top postimgh" alt="..."></div>
+        <div class="card-body" id="divToReload">
+          <div class="up" id="inr" style="display: flex;justify-content:space-between;">
+            
+            <!-- <div class="d-flex caption mb-0 align-items-baseline"><h6>Date : </h6><p class="mwirld"> {{parsed.date}}</p></div> -->
+        
+        </div>
+         
+          
+        </div>
+      </div>
+
+      {% endif %}
 
   {% for post in posts reversed %}
   
@@ -885,6 +932,22 @@ $('#imajee').change(function() {
    document.getElementById('excce').style.border='2px solid green';
 });
 
+  // daily image description
+  let lengthofexp={{parsed.explanation|length}}
+  let str="{{parsed.explanation}}"
+  if(lengthofexp>100){
+  sliceexplanation();
+}
+
+function sliceexplanation(){
+let slicedexp=str.slice(0,90)
+slicedexp=slicedexp+'...'+' <button class="readmore" onclick="fullread()">read more</button>'
+
+document.getElementById('explanationofimage').innerHTML=slicedexp
+}
+function fullread(){
+  document.getElementById('explanationofimage').innerHTML=str+' ~ <button class="readmore" onclick="sliceexplanation()">read less</button>'
+}
 
     </script>
   </body>
