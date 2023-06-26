@@ -19,3 +19,4 @@ media/
 # Virtual environment
 sclone/venv/
 sclone/env/
+sclone/.vscode

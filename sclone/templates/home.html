@@ -692,7 +692,7 @@ body{
     <img src="/static/nasalogo.png" alt="" class="postprofile" id="socialbook_0_following" name=""></div>
     
     <div class="div" style="display: flex;flex-direction:column;">
-      <a class="plink"">{{parsed.copyright}}</a>
+      <a class="plink">{{parsed.copyright}}</a>
       <div class="design"><p class="desti" id="szf">Picture of the day</p></div>
       
     </div>
@@ -771,7 +771,7 @@ body{
   <img src="/static/logo.png" alt="" class="postprofile" id="socialbook_0_following" name=""></div>
   
   <div class="div" style="display: flex;flex-direction:column;">
-    <a class="plink"">Socialbook</a>
+    <a class="plink">Socialbook</a>
     <div class="design"><p class="desti" id="szf">Since 2020</p></div>
     
   </div>
@@ -816,7 +816,7 @@ body{
           <div class="card-body flx">
             <a class="dec" href="/profile/{{items.user}}">
             <h5 class="card-title sugname">{{items.user}}</h5></a>
-            <p class="mb-0 pmb" style="margin-left: 0;">{{items.location}}</p>
+            <p class="mb-0 pmb" style="margin-left: 0;">{{items.location |slice:":15"}}</p>
             <!-- <button class="btn btn-primary btn-sm">Follow</button> -->
           </div>
           <div class="plusbatn">
@@ -845,7 +845,14 @@ body{
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
     <script>
-    
+      let postusernames = document.querySelectorAll(".sugname");
+      console.log(postusernames)
+      postusernames.forEach(element => {
+        let ulstring=element.innerHTML
+        if(ulstring.length>10)
+        element.innerHTML=ulstring.slice(0,9)+"..."
+     
+      });
       
       let imgurls=new Map();
       let kamm=new Map()

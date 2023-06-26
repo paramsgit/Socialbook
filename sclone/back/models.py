@@ -25,8 +25,8 @@ class Profile(models.Model):
     fname= models.CharField(max_length=100,default="Mr./Mrs.")
     lname= models.CharField(max_length=100,default="Unknown",)
     status= models.CharField(max_length=100,default="Unknown",)
-    file = models.ImageField(upload_to='images',default='defaultprofile.jpg')
-    cover = models.ImageField(upload_to='coverimages',default='blank.png')
+    file = models.ImageField(upload_to='images',default='default/defaultprofile.jpg')
+    cover = models.ImageField(upload_to='coverimages',default='default/blank.png')
     joining=models.DateField(default=date.today)
     dob=models.DateField(default=date.today)
 
