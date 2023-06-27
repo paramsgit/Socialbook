@@ -1,5 +1,5 @@
 #!/bin/sh
-current_dir=$(whoami)
+current_dir=$(pwd)
 echo $current_dir
 echo $USER
 
