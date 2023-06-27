@@ -122,19 +122,19 @@ def index(request):
     
     # nasa Image
     response_code=400
-    try:
-        request_api=requests.get('https://api.nasa.gov/planetary/apod?api_key=gOEFbB7Td1cAtnFgsOrRbuF440Pc9aXAR9KcDfBg')
-        # print(request_api)
-        response_code=request_api.status_code
-        print(type(response_code))
-        data = request_api.text
-        parse_json=json.loads(data)
-        print(parse_json['copyright'])
-    except Exception as e:
-        print(e)
+    # try:
+    #     request_api=requests.get('https://api.nasa.gov/planetary/apod?api_key=gOEFbB7Td1cAtnFgsOrRbuF440Pc9aXAR9KcDfBg')
+    #     # print(request_api)
+    #     response_code=request_api.status_code
+    #     print(type(response_code))
+    #     data = request_api.text
+    #     parse_json=json.loads(data)
+    #     print(parse_json['copyright'])
+    # except Exception as e:
+    #     print(e)
     
     
-    return render(request,'home.html',{'user_profile':user_profile,'posts':newfeed,'lsugg':lsugg[:4],'form':form,'postuserdata':userfpdata,'user_following':user_following2,'user_followers':user_followers2,'noofposts':noofposts,'likedpostsid':likedpostsid,'response_code':response_code,'parsed':parse_json})
+    return render(request,'home.html',{'user_profile':user_profile,'posts':newfeed,'lsugg':lsugg[:4],'form':form,'postuserdata':userfpdata,'user_following':user_following2,'user_followers':user_followers2,'noofposts':noofposts,'likedpostsid':likedpostsid})
  
 def signup(request): 
     if request.method=='POST':

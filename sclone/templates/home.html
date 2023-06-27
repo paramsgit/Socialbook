@@ -654,7 +654,7 @@ body{
           <label for="imajee" class="lbl" >
             <div class="d-flex exc" id="excce">
            <i class="bi bi-image-fill text-success pe-2"></i><p class="ctxt">Photo</p></div></label>
-          <label for="feel"  class="lbl">
+          <label style="cursor: default;" for="feel"  class="lbl">
             <div class="d-flex exc" id="feellabel">
 <i class="bi bi-emoji-smile-fill text-warning pe-2"></i><p class="ctxt" id="feeltext">Feeling</p>
 <select name="feel" id="feelinga" style="display: none;">
@@ -667,8 +667,9 @@ body{
   <option value="sad">Relaxed</option>
   <option value="sad">Tired</option>
 </select>
-</div></label>
-          <label for="x" class="lbl">
+</div>
+</label>
+          <label style="cursor: default;" for="x" class="lbl">
             <div class="d-flex exc">
            <i class="bi bi-calendar2-event-fill text-danger pe-2"></i><p class="ctxt">Event</p></div></label>
            <input type="file" name="uphoto" id="imajee" style="visibility: hidden;width: 1px;">
@@ -684,7 +685,7 @@ body{
     <!-- Share feed toolbar END -->
   </div>
   <!-- Share feed END -->
-
+{% comment %} 
   {% if response_code == 200 %}
   
   <div class="card vichlacard" style="margin-bottom: 20px;">
@@ -721,7 +722,7 @@ body{
         </div>
       </div>
 
-      {% endif %}
+      {% endif %} {% endcomment %}
 
   {% for post in posts reversed %}
   
@@ -765,7 +766,7 @@ body{
  
   {% endfor %}
 
- {% if posts|length == 0 %}
+{% if posts|length == 0 %}
  <div class="card vichlacard" style="margin-bottom: 20px;">
   <div class="iopo" style="display: flex;">
     <div class="divatra">
@@ -790,7 +791,7 @@ body{
         
       </div>
     </div>
- {% endif %}
+ {% endif %} 
    
 
 
@@ -940,22 +941,11 @@ $('#imajee').change(function() {
    document.getElementById('excce').style.border='2px solid green';
 });
 
-  // daily image description
-  let lengthofexp={{parsed.explanation|length}}
-  let str="{{parsed.explanation}}"
-  if(lengthofexp>100){
-  sliceexplanation();
-}
+ 
+ 
 
-function sliceexplanation(){
-let slicedexp=str.slice(0,90)
-slicedexp=slicedexp+'...'+' <button class="readmore" onclick="fullread()">read more</button>'
 
-document.getElementById('explanationofimage').innerHTML=slicedexp
-}
-function fullread(){
-  document.getElementById('explanationofimage').innerHTML=str+' ~ <button class="readmore" onclick="sliceexplanation()">read less</button>'
-}
+
 
     </script>
   </body>
