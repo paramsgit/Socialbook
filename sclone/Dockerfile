@@ -6,9 +6,9 @@ COPY requirements.txt .
 
 RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
-RUN chown -R root:root /app/database
-RUN python manage.py makemigrations
-RUN python manage.py migrate
+# RUN chown -R root:root /app/database
+# RUN python manage.py makemigrations
+# RUN python manage.py migrate
 
 
 
