@@ -9,6 +9,6 @@ ssh -T ubuntu@34.239.105.141 <<EOF
   cd sclone
   sudo docker-compose build
   sudo docker-compose up -d
-  sudo service nginx restart
+  
   exit
 EOF
