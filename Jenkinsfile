@@ -17,7 +17,7 @@ node {
             
 
         stage 'Deploy'
-            sh 'chmod 700 ./sclone/deployment/deploy_prod.sh'
+            sh 'chmod 700 sclone/deployment/deploy_prod.sh'
             sh '.sclone/deployment/deploy_prod.sh'
 
         stage 'Publish results'
