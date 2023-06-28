@@ -1,16 +1,23 @@
  
- <img src="sclone/static/logo.png" alt="logo" width="100" height="100" align="right" style="margin-top:15px" /> 
+ <img src="sclone/static/logo.png" alt="logo" width="100" height="100" align="right"  /> 
 
 # Socialbook 
 
 
 Socialbook is a web application built with Django that allows users to connect and share their memories with others. It provides features such for profile management, photo posting, liking, making friends and chat functionality.
 
+ <img src="sclone/static/imgs/img1.png" alt="demo"  style="margin:20px 0 40px 0" /> 
+
 ## Features
 
 - **Signup with Email OTP Verification**: Users can sign up for an account using their email address and complete the verification process using a One-Time Password (OTP) sent to their email.
 
+<img src="sclone/static/imgs/signupin.jpg" alt="signin"  style="margin:20px 0 40px 0" /> 
+
 - **Profile Section**: Once registered, users have their own profile section where they can manage their personal information, such as username, profile picture, bio, and other details.
+
+<img src="sclone/static/imgs/profilesec.png" alt="profile"  style="margin:20px 0 40px 0" /> 
+
 
 - **Photo Posting**: Users can upload and share their photos with the community. They can provide captions, add tags, and select privacy settings for their posts.
 
