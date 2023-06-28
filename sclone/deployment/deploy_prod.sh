@@ -7,7 +7,7 @@ echo $USER
   cd project/Socialbook
   git pull
   cd sclone
-  sudo docker-compose build
-  sudo docker-compose up -d
+  docker-compose build
+  docker-compose up -d
 
   exit
