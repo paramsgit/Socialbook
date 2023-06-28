@@ -1,6 +1,6 @@
  
- <img src="sclone/static/logo.png" alt="logo" width="100" height="100" align="right" /> 
- 
+ <img src="sclone/static/logo.png" alt="logo" width="100" height="100" align="right" style="margin-top:15px" /> 
+
 # Socialbook 
 
 
