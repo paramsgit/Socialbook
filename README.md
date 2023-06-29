@@ -11,7 +11,7 @@ Introducing a Django social media web application with CI/CD using Jenkins. A us
 - [CI/CD Setup and Usage](#prerequisites)
 
 
-
+ 
 
 
  <img src="sclone/static/logo.png" alt="logo" width="100" height="100" align="right"  /> 
