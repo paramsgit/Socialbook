@@ -1,4 +1,18 @@
- 
+# Social media web app with CI/CD
+Introducing a Django social media web application with CI/CD using Jenkins. A user-friendly social media platform is created using the Django framework and Jenkins automation in this project.  With features like user profiles, posts, and interactions, it offers a seamless experience for connecting and sharing. The CI/CD pipeline ensures smooth deployment, making it easy to maintain and update the application.
+
+## Table of Contents
+
+- [Introduction](#introduction)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [CI/CD Architecture](#cicd)
+
+
+
+
+
  <img src="sclone/static/logo.png" alt="logo" width="100" height="100" align="right"  /> 
 
 # Socialbook 
@@ -31,7 +45,7 @@ Socialbook is a web application built with Django that allows users to connect a
 
 <img src="sclone/static/imgs/follow.png" alt="profile"  style="margin:20px 0 40px 0" /> 
 
-- **Chat**: The website provides a real-time chat feature that allows users to communicate with each other. Users can send text messages, share photos, and have private conversations.
+- **Chat**: The website provides a real-time chat feature that allows users to communicate with each other. Users can send and receive text messages in this application.
 
 <img src="sclone/static/imgs/chat.png" alt="profile"  style="margin:20px 0 40px 0" />
 
@@ -117,6 +131,63 @@ Contributions to this project are welcome. If you have any ideas, suggestions, o
 
 
 This project was developed using the Django web framework. We would like to acknowledge the Django community for their excellent work and documentation that helped us build this application.
+
+
+#
+
+# Continuous Integration and Continuous Deployment
+
+In this architecture, an AWS EC2 instance is utilized to set up two containers. The first container hosts the Django application, while the second container runs Jenkins. With this setup, whenever code is pushed to GitHub, Jenkins automatically triggers the testing, building, and deployment processes, ensuring seamless integration and delivery of updates to the Django app running in the first container. The use of Docker enables efficient containerization and isolation of the application components.
+
+<img src="sclone/static/imgs/1.png" alt="signin"  style="margin:20px 0 40px 0" /> 
+
+#
+# Django Web App CI/CD with Jenkins
+
+
+
+
+
+## Prerequisites
+
+Before you proceed, make sure you have the following prerequisites:
+
+- Django framework installed
+- Jenkins installed and configured
+- Git repository for your Django web app
+
+## Installation
+
+To set up the CI/CD pipeline for your Django web app, follow these steps:
+
+1. Clone the Git repository for your Django web app and setup django app as described above.
+
+2. Set up a Jenkins Job : 
+On the new job page, name the item Django-app and choose Multibranch pipeline.On the configuration page, click on Add source and choose Git. Fill in the details of your repository in Github. Then, check Periodically.Click Save.
+
+3. Navigate to Jenkins root -> Django-app-> master and once there click on Build now to start a build manually.
+
+## Configuration
+
+The CI/CD pipeline can be configured through the following files and settings:
+
+- `Jenkinsfile`: Contains the declarative pipeline configuration for Jenkins.
+- `requirements.txt`: Lists the dependencies required by your Django web app.
+- `settings.py`: Includes the configuration settings for your Django application.
+
+Make sure to update these files according to your project structure and requirements.
+
+## Usage
+
+To trigger the CI/CD pipeline and deploy your Django web app, follow these steps:
+
+1. Push your code changes to the Git repository.
+2. Jenkins will automatically detect the changes and trigger the pipeline.
+3. Jenkins will build, test, and deploy the application based on your pipeline configuration.
+4. Monitor the pipeline execution in the Jenkins dashboard.
+
+
+
 
 ## Contact
 
