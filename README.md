@@ -3,11 +3,12 @@ Introducing a Django social media web application with CI/CD using Jenkins. A us
 
 ## Table of Contents
 
-- [Introduction](#introduction)
+- [Introduction](#socialbook)
+- [Key-features](#features)
 - [Installation](#installation)
-- [Usage](#usage)
 - [Contributing](#contributing)
-- [CI/CD Architecture](#cicd)
+- [CI/CD Architecture](#acknowledgements)
+- [CI/CD Setup and Usage](#prerequisites)
 
 
 
@@ -23,6 +24,8 @@ Socialbook is a web application built with Django that allows users to connect a
  <img src="sclone/static/imgs/img1.png" alt="demo"  style="margin:20px 0 40px 0" /> 
 
 ## Features
+
+
 
 - **Signup with Email OTP Verification**: Users can sign up for an account using their email address and complete the verification process using a One-Time Password (OTP) sent to their email.
 
@@ -133,7 +136,9 @@ Contributions to this project are welcome. If you have any ideas, suggestions, o
 This project was developed using the Django web framework. We would like to acknowledge the Django community for their excellent work and documentation that helped us build this application.
 
 
-#
+  
+
+
 
 # Continuous Integration and Continuous Deployment
 
