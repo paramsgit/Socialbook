@@ -51,7 +51,7 @@ Socialbook is a web application built with Django that allows users to connect a
 - **Chat**: The website provides a real-time chat feature that allows users to communicate with each other. Users can send and receive text messages in this application.
 
 <img src="sclone/static/imgs/chat.png" alt="profile"  style="margin:20px 0 40px 0" />
-
+ 
 
 # Installation
 
