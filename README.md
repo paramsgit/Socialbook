@@ -194,6 +194,4 @@ To trigger the CI/CD pipeline and deploy your Django web app, follow these steps
 
 
 
-## Contact
 
-If you have any questions or need further assistance, feel free to contact us at param11650@gmail.com.
